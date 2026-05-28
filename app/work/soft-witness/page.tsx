@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { assetPath } from "@/lib/assetPath";
 
 export const metadata: Metadata = {
   title: "Soft Witness"
 };
 
-const pdfPages = Array.from({ length: 30 }, (_, index) => `/assets/google-ux-case-pages/page-${String(index + 1).padStart(2, "0")}.png`);
+const pdfPages = Array.from({ length: 30 }, (_, index) =>
+  assetPath(`/assets/google-ux-case-pages/page-${String(index + 1).padStart(2, "0")}.png`)
+);
 
 export default function SoftWitnessPage() {
   return (

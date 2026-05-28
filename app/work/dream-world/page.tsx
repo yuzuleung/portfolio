@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { assetPath } from "@/lib/assetPath";
 
 export const metadata: Metadata = {
   title: "Dream World"
@@ -9,7 +10,7 @@ const liveUrl = "https://yuzuleung.github.io/dream/";
 
 const planImages = Array.from(
   { length: 10 },
-  (_, index) => `/assets/dream-world-plan/page-${String(index + 1).padStart(2, "0")}.jpg`
+  (_, index) => assetPath(`/assets/dream-world-plan/page-${String(index + 1).padStart(2, "0")}.jpg`)
 );
 
 const sections = [
@@ -124,7 +125,7 @@ export default function DreamWorldPage() {
           >
             <figure className="relative overflow-hidden bg-[#f5eef8] shadow-[0_28px_90px_rgba(77,52,112,0.2)] transition duration-500 group-hover:-translate-y-1 group-hover:shadow-[0_34px_110px_rgba(77,52,112,0.28)]">
               <img
-                src="/assets/dream-world-reality.jpg"
+                src={assetPath("/assets/dream-world-reality.jpg")}
                 alt="Dream World reality entrance screenshot"
                 className="h-auto w-full transition duration-700 group-hover:scale-[1.015]"
               />

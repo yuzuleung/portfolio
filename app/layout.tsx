@@ -4,6 +4,7 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { PageTransitionLoader } from "@/components/PageTransitionLoader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { assetPath } from "@/lib/assetPath";
 
 export const metadata: Metadata = {
   title: {
@@ -12,9 +13,9 @@ export const metadata: Metadata = {
   },
   description: "Yong Liang portfolio.",
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png"
+    icon: assetPath("/favicon.png"),
+    shortcut: assetPath("/favicon.png"),
+    apple: assetPath("/favicon.png")
   }
 };
 

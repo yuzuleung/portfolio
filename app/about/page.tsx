@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { assetPath } from "@/lib/assetPath";
 
 export const metadata: Metadata = {
   title: "ABOUT ME"
@@ -254,7 +255,7 @@ export default function AboutPage() {
           <section className="rounded-md bg-[#69577a] p-8 text-white shadow-sm">
             <div className="relative aspect-[1.05/1] overflow-hidden bg-[#292431]">
               <Image
-                src="/assets/AboutMe.JPG"
+                src={assetPath("/assets/AboutMe.JPG")}
                 alt="Yong Liang"
                 fill
                 className="object-cover"

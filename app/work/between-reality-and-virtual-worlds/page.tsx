@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { assetPath } from "@/lib/assetPath";
 
 export const metadata: Metadata = {
   title: "Between Reality and Virtual Worlds"
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
 
 const caseStudyImages = Array.from(
   { length: 12 },
-  (_, index) => `/assets/reality-virtual-worlds/page-${String(index + 1).padStart(2, "0")}.jpg`
+  (_, index) => assetPath(`/assets/reality-virtual-worlds/page-${String(index + 1).padStart(2, "0")}.jpg`)
 );
 
 export default function BetweenRealityAndVirtualWorldsPage() {

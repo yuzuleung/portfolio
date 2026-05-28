@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { assetPath } from "@/lib/assetPath";
 
 export const metadata: Metadata = {
   title: "Civic Signals Case Study"
@@ -84,7 +85,7 @@ export default function CivicSignalsPage() {
         <div className="mx-auto max-w-7xl">
           <figure className="overflow-hidden bg-[#f4f6f3]">
             <img
-              src="/assets/project-map.png"
+              src={assetPath("/assets/project-map.png")}
               alt="Civic mapping research materials"
               className="h-[62vh] w-full object-cover opacity-80 saturate-75"
             />
