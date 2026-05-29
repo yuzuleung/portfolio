@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-[calc(100vh-8rem)] bg-white pt-28 text-ink">
-      <section className="flex min-h-[calc(100vh-12rem)] flex-col items-center justify-center px-5 text-center md:px-16">
+      <section className="flex min-h-[calc(100vh-16rem)] flex-col items-center justify-center px-5 pb-14 text-center md:px-16">
         <h1 className="max-w-6xl font-barlow text-[clamp(1.55rem,3vw,3.25rem)] font-medium leading-[1.18] tracking-normal text-[#263039]">
           <span className="block">Hi! I&apos;m Yong Liang.</span>
           <span className="block">I’m a Product Manager / UX Designer</span>
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
       </section>
       <FeaturedProjectsMarquee />
-      {/* Optional: add photography identity section here later. */}
+      {/* Optional: add photography identity section here later. Future section: Through My Lens. */}
     </main>
   );
 }
