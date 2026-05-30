@@ -4,6 +4,7 @@ import path from "node:path";
 const nextConfig = {
   output: "export",
   outputFileTracingRoot: path.dirname(new URL(import.meta.url).pathname),
+  devIndicators: false,
   images: {
     unoptimized: true
   },
