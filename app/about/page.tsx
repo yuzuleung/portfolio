@@ -56,15 +56,6 @@ const experiences = [
     company: "Fujitsu",
     roles: [
       {
-        period: "2019.4 - 2020.5",
-        title: "System Engineer",
-        summary: "Participated in the development and maintenance of healthcare systems for hospitals and medical institutions.",
-        details: [
-          "System development and operational support.",
-          "Enterprise-scale system workflow understanding."
-        ]
-      },
-      {
         period: "2020.6 - 2022.2",
         title: "Consultant",
         summary: "Worked closely with enterprise clients in healthcare-related digital transformation projects.",
@@ -74,48 +65,67 @@ const experiences = [
           "System improvement proposal and documentation.",
           "Cross-functional collaboration between technical and business teams."
         ]
+      },
+      {
+        period: "2019.4 - 2020.5",
+        title: "System Engineer",
+        summary: "Participated in the development and maintenance of healthcare systems for hospitals and medical institutions.",
+        details: [
+          "System development and operational support.",
+          "Enterprise-scale system workflow understanding."
+        ]
       }
     ]
   }
 ];
 
-const expertise = ["Product Strategy", "UI/UX Design", "Agile/Scrum", "Frontend Engineering", "Product Management", "Pharmacy"];
-
 const certifications = [
-  "Google UX Design",
-  "Advanced CSPO & CSD",
-  "Meta Frontend Developer",
-  "Certified Scrum Master"
+  "Google UX Design Professional Certificate",
+  "Advanced Certified Scrum Product Owner",
+  "Certified Scrum Developer",
+  "Certified Scrum Master",
+  "Meta Front-End Developer Professional Certificate"
 ];
 
 const skillGroups = [
   {
-    title: "/Design",
+    title: "Product",
     items: [
-      "UI/UX Design",
-      "Product Design",
-      "0→1 Innovation",
-      "GenAI / Vibe Coding",
-      "Creative + Art Direction",
-      "Visual Design + Systems",
-      "Typography",
-      "Concept Development",
-      "Creative Strategy",
-      "Illustration"
+      "Product Strategy",
+      "Requirement Definition",
+      "Agile/Scrum",
+      "Stakeholder Communication",
+      "Data-informed UX Improvement",
+      "Product Management",
+      "Project Management"
     ]
   },
   {
-    title: "/Technical",
+    title: "Design",
+    items: [
+      "UI/UX Design",
+      "Product Design",
+      "Information Design",
+      "Design Systems",
+      "Creative Strategy",
+      "Graphic Design",
+      "Social Project Design"
+    ]
+  },
+  {
+    title: "Technical",
     items: [
       "Next.js",
       "React",
-      "Typescript",
-      "HTML5",
-      "CSS",
+      "Vue",
+      "TypeScript",
+      "Javascript",
+      "HTML5 / CSS",
       "PHP",
+      "GitHub",
       "AWS",
-      "Figma (Design + Prototyping)",
-      "Illustrator",
+      "Figma",
+      "Illustration",
       "Photoshop",
       "Lightroom"
     ]
@@ -124,7 +134,7 @@ const skillGroups = [
 
 const languages = [
   { name: "Chinese", level: "Native", width: "100%" },
-  { name: "Japanese", level: "Business", width: "95%" },
+  { name: "Japanese", level: "Native", width: "100%" },
   { name: "English", level: "Professional", width: "84%" }
 ];
 
@@ -178,7 +188,7 @@ export default function AboutPage() {
           <h1 className="max-w-3xl text-[clamp(2.4rem,5vw,4.6rem)] font-bold leading-[1.02] tracking-normal text-[#69577a]">
             Hi, I’m Yong Liang
           </h1>
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-[#332f3b]">
+          <p className="mt-20 max-w-3xl text-lg leading-8 text-[#332f3b]">
             A Tokyo-based product professional with a background in{" "}
             <span className="font-semibold text-tomato">product management</span>,{" "}
             <span className="font-semibold text-tomato">UX design</span>, and{" "}
@@ -190,12 +200,12 @@ export default function AboutPage() {
             exploring the relationship between design and human emotion.
           </p>
 
-          <section className="mt-14">
+          <section className="mt-[5.5rem]">
             <SectionHeading icon={<BriefcaseIcon />}>Work Experience</SectionHeading>
-            <div className="relative ml-3 border-l border-[#ded7e7] pl-8">
+            <div className="relative ml-1 pl-9 before:absolute before:left-[7px] before:top-1 before:h-full before:w-px before:bg-[#ded7e7]">
               {experiences.map((item) => (
                 <article key={item.company} className="relative pb-12 last:pb-0">
-                  <span className="absolute -left-[41px] top-1 h-2.5 w-2.5 rounded-full bg-[#7d6a91] ring-8 ring-[#f8f6fb]" />
+                  <span className="absolute -left-9 top-1 h-3.5 w-3.5 rounded-full bg-[#7d6a91]" />
                   <h3 className="text-2xl font-bold leading-tight text-[#201a27]">{item.company}</h3>
                   <div className="mt-6 space-y-6">
                     {item.roles.map((role) => (
@@ -223,71 +233,54 @@ export default function AboutPage() {
 
           <section className="mt-16">
             <SectionHeading icon={<BriefcaseIcon />}>Education</SectionHeading>
-            <div className="rounded-md border border-black/10 bg-white/80 p-8 shadow-sm md:flex md:items-start md:justify-between">
-              <div>
-                <h3 className="text-2xl font-bold text-[#201a27]">Musashino Art University</h3>
-                <p className="mt-2 text-base font-semibold text-[#69577a]">Bachelor of Design</p>
-                <p className="mt-4 max-w-2xl text-base leading-7 text-[#332f3b]">
-                  Focused on Web Design, information design, visual communication, and creative expression.
+            <div className="space-y-8">
+              <article>
+                <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between md:gap-8">
+                  <h3 className="text-2xl font-bold text-[#201a27]">Musashino Art University</h3>
+                  <p className="shrink-0 text-xs font-bold tracking-[0.12em] text-[#8a789d] md:mt-1">2025.04 - Present</p>
+                </div>
+                <p className="mt-4 text-base font-semibold text-[#69577a]">Bachelor of Design Information</p>
+                <p className="mt-5 max-w-3xl text-base leading-7 text-[#332f3b]">
+                  Focused on web design, information design, graphic design, visual communication, and creative expression.
                 </p>
-              </div>
-              <p className="mt-5 shrink-0 text-xs font-bold uppercase tracking-[0.12em] text-[#8a789d] md:mt-1">
-                2025 - Present
-              </p>
+              </article>
+              <article>
+                <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between md:gap-8">
+                  <h3 className="text-2xl font-bold text-[#201a27]">Okayama University</h3>
+                  <p className="shrink-0 text-xs font-bold tracking-[0.12em] text-[#8a789d] md:mt-1">2016.10 - 2018.09</p>
+                </div>
+                <p className="mt-4 text-base font-semibold text-[#69577a]">Master of Pharmacy</p>
+                <p className="mt-5 max-w-3xl text-base leading-7 text-[#332f3b]">
+                  Conducted a genetic analysis study on bacteria that cause food poisoning. Built a research-based foundation in
+                  scientific thinking, analytical reasoning, and structured problem solving.
+                </p>
+              </article>
             </div>
           </section>
 
           <section className="mt-16">
             <SectionHeading icon={<BadgeIcon />}>Beyond Work</SectionHeading>
-            <div className="rounded-md border border-black/10 bg-white/80 p-8 shadow-sm">
-              <p className="text-base leading-8 text-[#332f3b]">
-                I’m deeply inspired by photography, travel, architecture, and visual culture. I enjoy observing how
-                emotions, memories, and aesthetics influence the way people experience products and spaces.
-              </p>
-              <p className="mt-5 text-base leading-8 text-[#332f3b]">
-                Recently, I’ve been exploring the intersection of design, storytelling, and creative technology.
-              </p>
-            </div>
+            <p className="max-w-3xl text-base leading-8 text-[#332f3b]">
+              I’m inspired by photography, travel, and psychology. I enjoy observing how emotions, memories, and
+              aesthetics influence the way people experience products and spaces.
+            </p>
+            <p className="mt-5 max-w-3xl text-base leading-8 text-[#332f3b]">
+              I am also a freelance photographer, capturing emotions, cultures, and diverse experiences through my lens.
+            </p>
           </section>
         </div>
 
-        <aside className="space-y-12 lg:pt-28">
-          <section className="rounded-md bg-[#69577a] p-8 text-white shadow-sm">
-            <div className="relative aspect-[1.05/1] overflow-hidden bg-[#292431]">
+        <aside className="space-y-12 lg:pt-6">
+          <section>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-[#292431]">
               <Image
                 src={assetPath("/assets/AboutMe.JPG")}
                 alt="Yong Liang"
                 fill
                 className="object-cover"
-                sizes="296px"
+                sizes="360px"
+                priority
               />
-            </div>
-            <h2 className="mt-7 text-2xl font-bold">Expertise</h2>
-            <div className="mt-5 flex flex-wrap gap-2">
-              {expertise.map((item) => (
-                <span key={item} className="rounded-sm border border-white/25 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.08em]">
-                  {item}
-                </span>
-              ))}
-            </div>
-          </section>
-
-          <section>
-            <SectionHeading icon={<BadgeIcon />}>Certifications</SectionHeading>
-            <div className="space-y-3">
-              {certifications.map((item) => (
-                <div key={item} className="flex items-center gap-4 rounded-sm border border-black/10 bg-white/80 p-5 shadow-sm">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f0ebf5] text-[#69577a]">
-                    <BadgeIcon />
-                  </span>
-                  <div>
-                    <h3 className="text-sm font-bold">{item}</h3>
-                    <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.16em] text-[#463d50]">
-                      Professional Certificate
-                    </p>
-                  </div>
-                </div>
-              ))}
             </div>
           </section>
 
@@ -307,6 +300,20 @@ export default function AboutPage() {
                       </span>
                     ))}
                   </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <SectionHeading icon={<BadgeIcon />}>Certifications</SectionHeading>
+            <div className="space-y-3 rounded-md border border-black/10 bg-white/80 p-6 shadow-sm">
+              {certifications.map((item) => (
+                <div key={item} className="flex items-center gap-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f0ebf5] text-[#69577a]">
+                    <BadgeIcon />
+                  </span>
+                  <h3 className="text-sm font-bold leading-6">{item}</h3>
                 </div>
               ))}
             </div>
