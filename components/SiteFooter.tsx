@@ -1,6 +1,6 @@
 export function SiteFooter() {
   return (
-    <footer className="flex flex-col items-center justify-center gap-4 bg-white px-5 py-10 text-ink md:flex-row md:gap-5">
+    <footer className="fixed bottom-0 left-0 right-0 z-30 flex flex-col items-center justify-center gap-4 bg-white/85 px-5 py-4 text-ink backdrop-blur-md md:flex-row md:gap-5">
       <p className="text-sm font-medium text-neutral-400">© 2026 Yong Liang | Tokyo</p>
       <div className="flex items-center gap-3">
         <a

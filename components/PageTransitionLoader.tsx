@@ -18,6 +18,7 @@ export function PageTransitionLoader() {
 
       const url = new URL(link.href);
       if (url.origin !== window.location.origin) return;
+      if (url.pathname === window.location.pathname && url.hash) return;
       if (url.pathname === window.location.pathname && url.hash === window.location.hash) return;
 
       setIsLoading(true);

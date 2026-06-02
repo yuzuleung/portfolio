@@ -4,16 +4,16 @@ export const projects = [
   {
     title: "Menu & Payment App",
     type: "UX Design / Mobile App",
-    image: assetPath("/assets/Menu_App_img.jpg"),
+    image: assetPath("/assets/Menu_App_img.png"),
     alt: "Mobile app prototype screens arranged across multiple phone mockups",
     href: "/work/menu-payment-app"
   },
   {
-    title: "Civic Signals",
-    type: "Research / Mapping",
-    image: assetPath("/assets/project-map.png"),
-    alt: "Design research maps and colored route markers",
-    href: "/work/civic-signals"
+    title: "Menu & Payment App — Editorial Case Study",
+    type: "UX Case Study / Product Design",
+    image: assetPath("/assets/Menu_App_img.png"),
+    alt: "Editorial case study preview for a Japanese restaurant menu and payment app",
+    href: "/work/menu-payment-app-editorial"
   },
   {
     title: "Soft Witness",
