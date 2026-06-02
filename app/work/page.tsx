@@ -10,7 +10,7 @@ export default function WorkPage() {
   return (
     <main className="min-h-screen bg-white px-5 py-28 text-ink md:px-16">
       <section className="mx-auto max-w-6xl">
-        <div className="border-t border-black/15 pt-7 text-center">
+        <div className="pt-7 text-center">
           <h1 className="text-2xl font-bold leading-9 tracking-[0.08em] text-tomato">
             Exploring human experiences
             <br />

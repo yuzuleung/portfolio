@@ -14,7 +14,7 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-30 flex items-center justify-between px-5 py-5 text-ink md:px-16">
+    <header className="fixed left-0 right-0 top-0 z-30 flex items-center justify-between bg-white/85 px-5 py-4 text-ink backdrop-blur-md md:px-16">
       <Link href="/" className="text-lg font-bold uppercase tracking-[0.08em]" data-cursor="button">
         Yong Liang
       </Link>

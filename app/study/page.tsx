@@ -26,7 +26,7 @@ export default function StudyPage() {
   return (
     <main className="min-h-screen bg-white px-5 py-28 text-ink md:px-16">
       <section>
-        <div className="border-t border-black/15 pt-7">
+        <div className="pt-7">
           <p className="text-xs font-bold uppercase tracking-[0.08em] text-tomato">Musashino Art University</p>
         </div>
 
