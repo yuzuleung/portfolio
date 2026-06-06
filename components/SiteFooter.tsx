@@ -9,7 +9,7 @@ export function SiteFooter() {
           href="https://www.linkedin.com/in/yong-liang-022158202/"
           target="_blank"
           rel="noreferrer"
-          className="relative z-[10002] inline-flex h-7 w-7 items-center justify-center rounded-full text-neutral-700 transition-colors hover:text-white"
+          className="relative z-[10002] inline-flex h-7 w-7 items-center justify-center rounded-full text-neutral-700 mix-blend-difference transition-colors hover:text-white"
           aria-label="LinkedIn"
           data-cursor="button"
         >
@@ -19,7 +19,7 @@ export function SiteFooter() {
         </a>
         <a
           href="mailto:yliang.jp@gmail.com"
-          className="relative z-[10002] inline-flex h-7 w-7 items-center justify-center rounded-full text-neutral-700 transition-colors hover:text-white"
+          className="relative z-[10002] inline-flex h-7 w-7 items-center justify-center rounded-full text-neutral-700 mix-blend-difference transition-colors hover:text-white"
           aria-label="Email"
           data-cursor="button"
         >
