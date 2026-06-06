@@ -248,37 +248,6 @@ function KeyScreensGallery() {
   );
 }
 
-function DemoVideos() {
-  return (
-    <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[minmax(0,1fr)_18rem]">
-      <figure>
-        <video
-          src={assetPath(`${screenshotBase}/dream_PC.mov`)}
-          className="aspect-video w-full bg-neutral-100 object-cover shadow-[0_18px_55px_rgba(23,21,18,0.08)]"
-          muted
-          loop
-          playsInline
-          controls
-          preload="metadata"
-        />
-        <figcaption className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">Desktop interaction</figcaption>
-      </figure>
-      <figure>
-        <video
-          src={assetPath(`${screenshotBase}/dream_SP.mov`)}
-          className="mx-auto aspect-[9/19] max-h-[34rem] w-full rounded-[1.6rem] border-[6px] border-[#171512] bg-neutral-100 object-cover shadow-[0_18px_55px_rgba(23,21,18,0.08)]"
-          muted
-          loop
-          playsInline
-          controls
-          preload="metadata"
-        />
-        <figcaption className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">Mobile interaction</figcaption>
-      </figure>
-    </div>
-  );
-}
-
 export default function DreamWorldPage() {
   return (
     <main className="min-h-screen bg-white px-5 pb-14 pt-20 text-[#171512] md:px-16 md:pt-24">
@@ -393,10 +362,6 @@ export default function DreamWorldPage() {
 
         <Section id="key-screens" label="Key Screens" title="Curated screens from the final responsive experience.">
           <KeyScreensGallery />
-        </Section>
-
-        <Section id="demo-videos" label="Demo Videos" title="Desktop and mobile interaction demos.">
-          <DemoVideos />
         </Section>
 
         <Section id="ai-interpreter" label="AI Dream Interpreter" title="A reflective companion, not a diagnosis tool.">
