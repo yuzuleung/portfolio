@@ -59,6 +59,16 @@ export function CustomCursor() {
   useEffect(() => {
     if (!isEnabled) return;
 
+    document.documentElement.classList.add("custom-cursor-enabled");
+
+    return () => {
+      document.documentElement.classList.remove("custom-cursor-enabled");
+    };
+  }, [isEnabled]);
+
+  useEffect(() => {
+    if (!isEnabled) return;
+
     const handleMouseMove = (event: MouseEvent) => {
       mouseX.set(event.clientX);
       mouseY.set(event.clientY);

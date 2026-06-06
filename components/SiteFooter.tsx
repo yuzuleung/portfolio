@@ -1,13 +1,15 @@
 export function SiteFooter() {
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-30 flex flex-col items-center justify-center gap-4 bg-white/85 px-5 py-4 text-ink backdrop-blur-md md:flex-row md:gap-5">
-      <p className="text-sm font-medium text-neutral-400">© 2026 Yong Liang | Tokyo</p>
+    <footer
+      className="relative z-10 flex flex-col items-center justify-center gap-4 px-5 py-4 text-neutral-500 md:flex-row md:gap-5"
+    >
+      <p className="text-sm font-medium">© 2026 Yong Liang | Tokyo</p>
       <div className="flex items-center gap-3">
         <a
           href="https://www.linkedin.com/in/yong-liang-022158202/"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex h-7 w-7 items-center justify-center rounded-full text-ink transition-colors hover:text-black"
+          className="inline-flex h-7 w-7 items-center justify-center rounded-full text-neutral-700 transition-colors hover:text-white"
           aria-label="LinkedIn"
           data-cursor="button"
         >
@@ -17,7 +19,7 @@ export function SiteFooter() {
         </a>
         <a
           href="mailto:hello@example.com"
-          className="inline-flex h-7 w-7 items-center justify-center rounded-full text-ink transition-colors hover:text-black"
+          className="inline-flex h-7 w-7 items-center justify-center rounded-full text-neutral-700 transition-colors hover:text-white"
           aria-label="Email"
           data-cursor="button"
         >

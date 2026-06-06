@@ -24,6 +24,11 @@ body [data-cursor] {
   cursor: none;
 }
 
+.custom-cursor-enabled,
+.custom-cursor-enabled * {
+  cursor: none !important;
+}
+
 ::selection {
   background: #c83a32;
   color: #ffffff;

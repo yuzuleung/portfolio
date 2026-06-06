@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { BottomBackToWork } from "@/components/BackToWorkLinks";
 import { assetPath } from "@/lib/assetPath";
 
 const accent = "#C89830";
@@ -26,6 +27,7 @@ const finalScreens = [
   ["AI Ordering", "hi-fi_prototype/iphone16pro_img/11_AI%E6%B3%A8%E6%96%87%20-%20chat1.png"],
   ["Account", "hi-fi_prototype/iphone16pro_img/12_Account.png"]
 ];
+const heroTags = ["Fintech", "BtoC", "Product Management", "UI/UX", "Front-End"];
 
 const wireframeScreens = [
   ["Homepage", "wireframe/01%20Homepage.png", "Create a clear first entry point for menu browsing and AI support."],
@@ -127,24 +129,31 @@ function DarkCard({ title, children }: { title: string; children: ReactNode }) {
 export function MenuPaymentEditorialCaseStudy() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#100f0d] text-[#ede7de]">
-      <section className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-28 md:px-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-32 lg:pt-36">
+      <section className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-20 md:px-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-32 lg:pt-24">
         <Reveal>
           <Link
             href="/work"
-            className="inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.28em] text-[#ede7de]/55 transition hover:text-[#ede7de]"
+            className="inline-flex items-center text-[#ede7de]/55 transition hover:text-[#ede7de]"
+            aria-label="Back to work"
             data-cursor="button"
           >
             <span className="h-px w-8 bg-current" />
-            Back to work
           </Link>
-          <p className="mt-20 text-xs font-bold uppercase tracking-[0.42em] text-[#C89830]">
+          <p className="mt-8 text-xs font-bold uppercase tracking-[0.42em] text-[#C89830]">
             UX Design Case Study
           </p>
+          <div className="mt-8 flex gap-2.5 overflow-x-auto whitespace-nowrap pb-1">
+            {heroTags.map((tag) => (
+              <span key={tag} className="shrink-0 rounded-full border border-[#ede7de]/15 px-4 py-2 text-xs font-semibold text-[#ede7de]/62">
+                {tag}
+              </span>
+            ))}
+          </div>
           <h1 className="mt-7 max-w-4xl font-serif text-[clamp(3.5rem,10vw,8.8rem)] leading-[0.9] tracking-[-0.04em] text-[#f8f2ea]">
             Menu & Payment App
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-9 text-[#ede7de]/68 md:text-xl">
-            A mobile ordering and cashless payment experience for Japanese dessert and dining restaurants,
+            A mobile ordering and cashless payment experience and AI Recommendation for Japanese dessert and dining restaurants,
             designed to reduce menu confusion, simplify customization, and support families and international
             customers.
           </p>
@@ -390,6 +399,8 @@ export function MenuPaymentEditorialCaseStudy() {
             </DarkCard>
           </div>
         </Section>
+
+        <BottomBackToWork className="text-[#ede7de]/55" linkClassName="hover:text-[#ede7de]" />
       </div>
     </main>
   );

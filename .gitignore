@@ -13,3 +13,7 @@ pnpm-debug.log*
 
 .DS_Store
 tsconfig.tsbuildinfo
+
+# Local source videos exceed GitHub's normal file size limit.
+public/assets/dream-world/dream_world_screenshot/dream_PC.mov
+public/assets/dream-world/dream_world_screenshot/dream_SP.mov

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { AboutContactActions } from "@/components/AboutContactActions";
 import { assetPath } from "@/lib/assetPath";
 
 export const metadata: Metadata = {
@@ -180,6 +181,31 @@ function LanguageIcon() {
   );
 }
 
+function LinkedInIcon() {
+  return (
+    <svg viewBox="0 0 32 32" className="h-5 w-5" aria-hidden="true">
+      <path fill="currentColor" d="M5 12h5v15H5V12Zm2.5-7A2.7 2.7 0 1 1 7.5 10 2.7 2.7 0 0 1 7.5 5ZM13 12h4.8v2.1h.1c.7-1.3 2.3-2.5 4.7-2.5 5 0 5.9 3.3 5.9 7.5V27h-5v-7c0-1.7 0-3.8-2.3-3.8s-2.7 1.8-2.7 3.7V27H13V12Z" />
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 32 32" className="h-5 w-5" aria-hidden="true">
+      <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 9h22v15H5z" />
+      <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="m5 10 11 8 11-8" />
+    </svg>
+  );
+}
+
+function ResumeIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+      <path fill="currentColor" d="M6 2h8l4 4v16H6V2Zm7 1.8V7h3.2L13 3.8ZM8 11h8V9H8v2Zm0 4h8v-2H8v2Zm0 4h5v-2H8v2Z" />
+    </svg>
+  );
+}
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#f8f6fb] px-5 pb-20 pt-28 text-[#24212a] md:px-16">
@@ -199,6 +225,8 @@ export default function AboutPage() {
             aesthetics can shape meaningful digital experiences. Outside of work, I enjoy traveling, photography, and
             exploring the relationship between design and human emotion.
           </p>
+
+          <AboutContactActions />
 
           <section className="mt-[5.5rem]">
             <SectionHeading icon={<BriefcaseIcon />}>Work Experience</SectionHeading>
@@ -239,8 +267,8 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-bold text-[#201a27]">Musashino Art University</h3>
                   <p className="shrink-0 text-xs font-bold tracking-[0.12em] text-[#8a789d] md:mt-1">2025.04 - Present</p>
                 </div>
-                <p className="mt-4 text-base font-semibold text-[#69577a]">Bachelor of Design Information</p>
-                <p className="mt-5 max-w-3xl text-base leading-7 text-[#332f3b]">
+                <p className="mt-4 text-base font-semibold text-[#69577a]">Bachelor of Design, Design Informatics</p>
+                <p className="mt-5 rounded-md border border-black/10 bg-white/70 p-5 text-base leading-7 text-[#332f3b] shadow-sm">
                   Focused on web design, information design, graphic design, visual communication, and creative expression.
                 </p>
               </article>
@@ -249,8 +277,8 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-bold text-[#201a27]">Okayama University</h3>
                   <p className="shrink-0 text-xs font-bold tracking-[0.12em] text-[#8a789d] md:mt-1">2016.10 - 2018.09</p>
                 </div>
-                <p className="mt-4 text-base font-semibold text-[#69577a]">Master of Pharmacy</p>
-                <p className="mt-5 max-w-3xl text-base leading-7 text-[#332f3b]">
+                <p className="mt-4 text-base font-semibold text-[#69577a]">Master of Pharmaceutical Sciences</p>
+                <p className="mt-5 rounded-md border border-black/10 bg-white/70 p-5 text-base leading-7 text-[#332f3b] shadow-sm">
                   Conducted a genetic analysis study on bacteria that cause food poisoning. Built a research-based foundation in
                   scientific thinking, analytical reasoning, and structured problem solving.
                 </p>

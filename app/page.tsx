@@ -19,7 +19,7 @@ export default function Home() {
         <p className="mt-8 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2 text-xs font-bold uppercase tracking-[0.18em] text-tomato md:gap-x-3.5 md:text-sm">
           <span>Product Manager</span>
           <span className="text-tomato/45">/</span>
-          <span>UI/UX Designer</span>
+          <span>UX Designer</span>
           <span className="text-tomato/45">/</span>
           <span>Frontend Engineer</span>
         </p>
