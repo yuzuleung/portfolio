@@ -524,17 +524,19 @@ function CaseStudyHero() {
           </div>
 
           <div className="flex justify-center lg:justify-end">
-            <video
-              className="max-h-[34rem] w-full max-w-[20rem] object-contain"
-              autoPlay
-              loop
-              muted
-              preload="auto"
-              playsInline
-              src={assetPath("/assets/Menu_App_img/Design%20a%20menu%20%26%20payment%20app%20and%20a%20responsive%20website%20for%20a%20Japanese%20restaurant.MOV")}
-            >
-              Your browser does not support the prototype video.
-            </video>
+            <div className="w-full max-w-[20rem] overflow-hidden [clip-path:inset(0_8.8%_0_8.8%_round_2.35rem)] sm:[clip-path:inset(0_8.6%_0_8.6%_round_2.7rem)]">
+              <video
+                className="block h-auto max-h-[34rem] w-full object-contain"
+                autoPlay
+                loop
+                muted
+                preload="auto"
+                playsInline
+                src={assetPath("/assets/Menu_App_img/Design%20a%20menu%20%26%20payment%20app%20and%20a%20responsive%20website%20for%20a%20Japanese%20restaurant.MOV")}
+              >
+                Your browser does not support the prototype video.
+              </video>
+            </div>
           </div>
         </motion.div>
 

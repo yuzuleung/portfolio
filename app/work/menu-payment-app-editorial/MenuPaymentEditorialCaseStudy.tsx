@@ -27,7 +27,7 @@ const finalScreens = [
   ["AI Ordering", "hi-fi_prototype/iphone16pro_img/11_AI%E6%B3%A8%E6%96%87%20-%20chat1.png"],
   ["Account", "hi-fi_prototype/iphone16pro_img/12_Account.png"]
 ];
-const heroTags = ["Fintech", "BtoC", "Product Management", "UI/UX", "Front-End"];
+const heroTags = ["Fintech", "Product Management", "UI/UX", "Front-End"];
 
 const wireframeScreens = [
   ["Homepage", "wireframe/01%20Homepage.png", "Create a clear first entry point for menu browsing and AI support."],

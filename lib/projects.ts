@@ -3,7 +3,7 @@ import { assetPath } from "./assetPath";
 export const projects = [
   {
     title: "au PAY",
-    type: "FINTECH / BtoC / PRODUCT MANAGER / UI/UX / FRONT-END",
+    type: "FINTECH / PRODUCT MANAGER / UI/UX / FRONT-END",
     image: assetPath("/assets/au-pay/au_pay_logo.png"),
     alt: "au PAY logo",
     href: "/work/menu-payment-app-editorial",
