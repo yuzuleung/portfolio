@@ -7,7 +7,6 @@ export const projects = [
     image: assetPath("/assets/au-pay/au_pay_card.png"),
     alt: "au PAY project card",
     href: "/work/menu-payment-app-editorial",
-    fit: "contain",
   },
   {
     title: "Menu & Payment App",
