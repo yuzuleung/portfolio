@@ -4,8 +4,8 @@ export const projects = [
   {
     title: "au PAY",
     type: "FINTECH / PRODUCT MANAGER / UI/UX / FRONT-END",
-    image: assetPath("/assets/au-pay/au_pay_logo.png"),
-    alt: "au PAY logo",
+    image: assetPath("/assets/au-pay/au_pay_card.png"),
+    alt: "au PAY project card",
     href: "/work/menu-payment-app-editorial",
     fit: "contain",
   },
