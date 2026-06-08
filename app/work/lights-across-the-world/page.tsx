@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 const assetBase = "/assets/Lights_Across_the_World";
 const heroImage = assetPath(`${assetBase}/Lights_Across_the_World.png`); // TODO: Replace with the final world map screenshot if updated.
 const localDemoVideo = assetPath(`${assetBase}/1day.mov`); // TODO: Replace or add a longer demo video URL when ready.
-const demoUrl = "#"; // TODO: Add the real interactive demo URL here.
-const externalVideoUrl = "#"; // TODO: Add the external demo video URL here if needed.
+const demoUrl = "";
+const externalVideoUrl = "";
 
 const tags = ["Data-driven Art", "API Visualization", "World Map", "Time-based Interaction", "Creative Coding"];
 
@@ -222,14 +222,20 @@ export default function LightsAcrossTheWorldPage() {
             <p className="mt-5 max-w-3xl text-xl leading-9 text-neutral-600">
               Visualizing sunrise, sunset, and the rhythm of cities through real astronomical data.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a href={demoUrl} className="inline-flex min-h-12 items-center rounded-full bg-[#171512] px-6 text-sm font-bold text-white transition hover:bg-tomato" data-cursor="button">
-                View Interactive Demo
-              </a>
-              <a href={externalVideoUrl} className="inline-flex min-h-12 items-center rounded-full border border-black/15 px-6 text-sm font-bold text-[#171512] transition hover:border-tomato hover:text-tomato" data-cursor="button">
-                Watch Demo Video
-              </a>
-            </div>
+            {demoUrl || externalVideoUrl ? (
+              <div className="mt-10 flex flex-wrap gap-4">
+                {demoUrl ? (
+                  <a href={demoUrl} className="inline-flex min-h-12 items-center rounded-full bg-[#171512] px-6 text-sm font-bold text-white transition hover:bg-tomato" data-cursor="button">
+                    View Interactive Demo
+                  </a>
+                ) : null}
+                {externalVideoUrl ? (
+                  <a href={externalVideoUrl} className="inline-flex min-h-12 items-center rounded-full border border-black/15 px-6 text-sm font-bold text-[#171512] transition hover:border-tomato hover:text-tomato" data-cursor="button">
+                    Watch Demo Video
+                  </a>
+                ) : null}
+              </div>
+            ) : null}
           </div>
           <figure className="overflow-hidden">
             <video
