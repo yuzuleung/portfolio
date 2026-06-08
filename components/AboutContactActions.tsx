@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { assetPath } from "@/lib/assetPath";
 
 const emailAddress = "yliang.jp@gmail.com";
+const resumeHref = assetPath("/assets/resume/resume.pdf");
 
 function LinkedInIcon() {
   return (
@@ -62,7 +64,9 @@ export function AboutContactActions() {
           <MailIcon />
         </button>
         <a
-          href="#"
+          href={resumeHref}
+          target="_blank"
+          rel="noreferrer"
           aria-label="Resume"
           className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#d8cfe3] bg-white/75 text-[#69577a] transition hover:border-[#69577a] hover:bg-white hover:text-[#24212a]"
           data-cursor="button"
