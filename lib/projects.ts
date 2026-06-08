@@ -9,18 +9,18 @@ export const projects = [
     href: "/work/au-pay",
   },
   {
+    title: "au ponta portal",
+    type: "FINTECH / Loyalty / 0→1 / Data-driven",
+    image: assetPath("/assets/au-ponta/au_ponta_card.png"),
+    alt: "au ponta portal project card",
+    href: "/work/au-ponta-portal",
+  },
+  {
     title: "Menu & Payment App",
     type: "UX Design / Mobile App",
     image: assetPath("/assets/Menu_App_img/Menu_App_img.png"),
     alt: "Mobile app prototype screens arranged across multiple phone mockups",
     href: "/work/menu-payment-app",
-  },
-  {
-    title: "Dream World",
-    type: "Interactive Experience / Emotional Storytelling",
-    image: assetPath("/assets/dream-world/Dream_World_Card.jpg"),
-    alt: "Dream World interactive experience cover",
-    href: "/work/dream-world",
   },
   {
     title: "Tokyo Culinary Atlas",
@@ -32,15 +32,6 @@ export const projects = [
     href: "/work/tokyo-culinary-atlas",
   },
   {
-    title: "Between Reality and Virtual Worlds",
-    type: "Speculative Design / Future Experience",
-    image: assetPath(
-      "/assets/reality-virtual-worlds/Reality_and_Virtual_Worlds.png",
-    ),
-    alt: "Between Reality and Virtual Worlds speculative design cover",
-    href: "/work/between-reality-and-virtual-worlds",
-  },
-  {
     title: "Lights Across the World",
     type: "DATA-DRIVEN ART / API VISUALIZATION",
     image: assetPath(
@@ -48,5 +39,21 @@ export const projects = [
     ),
     alt: "Lights Across the World ambient interaction cover",
     href: "/work/lights-across-the-world",
+  },
+  {
+    title: "Dream World",
+    type: "Interactive Experience / Emotional Storytelling",
+    image: assetPath("/assets/dream-world/Dream_World_Card.jpg"),
+    alt: "Dream World interactive experience cover",
+    href: "/work/dream-world",
+  },
+  {
+    title: "Between Reality and Virtual Worlds",
+    type: "Speculative Design / Future Experience",
+    image: assetPath(
+      "/assets/reality-virtual-worlds/Reality_and_Virtual_Worlds.png",
+    ),
+    alt: "Between Reality and Virtual Worlds speculative design cover",
+    href: "/work/between-reality-and-virtual-worlds",
   },
 ];
