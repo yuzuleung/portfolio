@@ -345,7 +345,6 @@ function CaseNav() {
   return (
     <aside className="hidden self-start lg:sticky lg:top-[7.5rem] lg:block">
       <nav aria-label="Case study navigation" className="w-44">
-        <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-tomato">Case Study</p>
         <div className="mt-7 space-y-1">
           {navItems.map(([id, label], index) => (
             <a

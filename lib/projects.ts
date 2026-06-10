@@ -9,10 +9,10 @@ export const projects = [
     href: "/work/au-pay",
   },
   {
-    title: "au ponta portal",
+    title: "au Ponta Portal",
     type: "FINTECH / Loyalty / 0→1 / Data-driven",
     image: assetPath("/assets/au-ponta/au_ponta_card.png"),
-    alt: "au ponta portal project card",
+    alt: "au Ponta Portal project card",
     href: "/work/au-ponta-portal",
   },
   {
