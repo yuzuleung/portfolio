@@ -42,16 +42,43 @@ const responsibilities = [
 ];
 
 const postLaunchEvolution = [
-  ["Accessibility Improvements", "Accessibility reviews and UI refinements to improve usability and compliance."],
-  ["Point History Renewal", "Improved information structure and transaction visibility for point-related activities."],
-  [
-    "Lawson Integration",
-    "Supported partner integration and related user experience planning.",
-    `${imageBase}/point_lawson_sp.PNG`
-  ],
-  ["New Money Service Launch", "Participated in introducing a new financial service experience into the portal ecosystem."],
-  ["Campaign UI Experiments", "Supported A/B testing of campaign presentation and carousel interaction patterns."],
-  ["Content & Navigation Optimization", "Improved discoverability across the つかう・ためる experience and promotional placements."]
+  {
+    title: "Lawson Integration",
+    body: "Supported partner integration and related user experience planning.",
+    image: `${imageBase}/point_lawson_sp.PNG`,
+    imageAlt: "Lawson Integration screen"
+  },
+  {
+    title: "Accessibility Improvements",
+    body: "Accessibility reviews and UI refinements to improve usability and compliance.",
+    image: `${imageBase}/accessibility.png`,
+    imageAlt: "Accessibility improvement screen"
+  },
+  {
+    title: "Point History Renewal",
+    body: "Improved information structure and transaction visibility for point-related activities.",
+    fullWidth: true,
+    images: [
+      [`${imageBase}/point_history_sp.PNG`, "Point history screen"],
+      [`${imageBase}/point_history_2_sp.PNG`, "Point history detail screen"],
+      [`${imageBase}/point_history_3_sp.PNG`, "Point history report screen"],
+      [`${imageBase}/point_calendar_sp.PNG`, "Point calendar screen"]
+    ]
+  },
+  {
+    title: "Campaign UI Experiments",
+    body: "Supported A/B testing of campaign presentation and carousel interaction patterns.",
+    image: `${imageBase}/point_carousel.jpg`,
+    imageAlt: "Campaign carousel experiment screen"
+  },
+  {
+    title: "New Money Service Launch",
+    body: "Participated in introducing a new financial service experience into the portal ecosystem."
+  },
+  {
+    title: "Content & Navigation Optimization",
+    body: "Improved discoverability across the つかう・ためる experience and promotional placements."
+  }
 ];
 
 const problemCards = [
@@ -106,6 +133,52 @@ const keyPortalExperiences = [
   ]
 ];
 
+const benefitFlow = [
+  "Notice benefit",
+  "Check eligibility",
+  "Enter campaign",
+  "Use au PAY",
+  "Check expected reward",
+  "Confirm granted points"
+];
+
+const benefitContributions = [
+  "Eligibility and user-state definition",
+  "Entry flow and entry-state behavior",
+  "Reward condition communication",
+  "Remaining reward cap display",
+  "Cross-service touchpoints across au PAY, au Ponta Portal, My au, and My UQ",
+  "Edge case review for contract status, entry timing, and reward calculation",
+  "Coordination with business, system, app, portal, CS, and analytics-related teams"
+];
+
+const benefitComplexity = [
+  [
+    "User Type Logic",
+    "Different user types such as au, UQ, and non-eligible users needed to be handled clearly."
+  ],
+  [
+    "Entry State Handling",
+    "Users needed different experiences before entry, after entry, and when additional action was required."
+  ],
+  [
+    "Reward Calculation",
+    "Reward communication needed to reflect contract, payment, timing, and campaign conditions."
+  ],
+  [
+    "Expected vs. Confirmed Points",
+    "The experience needed to distinguish expected reward information from confirmed granted points."
+  ],
+  [
+    "Cross-service Touchpoints",
+    "The journey connected au PAY, au Ponta Portal, My au, My UQ, notifications, and customer support."
+  ],
+  [
+    "System Coordination",
+    "The project required coordination across many internal systems and teams while keeping the user experience simple."
+  ]
+];
+
 function Section({
   id,
   eyebrow,
@@ -132,32 +205,6 @@ function Section({
       </div>
       {children}
     </section>
-  );
-}
-
-function ProductImage({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
-  return (
-    <figure className={`overflow-hidden ${className}`}>
-      <img src={assetPath(src)} alt={alt} className="h-auto w-full" />
-    </figure>
-  );
-}
-
-function PhoneScreenshotGrid({
-  images,
-  columns = "md:grid-cols-3"
-}: {
-  images: Array<[string, string]>;
-  columns?: string;
-}) {
-  return (
-    <div className={`grid items-start gap-5 ${columns}`}>
-      {images.map(([src, alt]) => (
-        <figure key={src} className="overflow-hidden">
-          <img src={assetPath(src)} alt={alt} className="h-auto w-full" />
-        </figure>
-      ))}
-    </div>
   );
 }
 
@@ -269,33 +316,90 @@ function KeyPortalExperiences() {
   );
 }
 
+function PortalLaunchDetail() {
+  return (
+    <div className="mt-12 grid gap-6 md:grid-cols-2">
+      <article className="border-t border-black/10 pt-6">
+        <h3 className="text-xl font-semibold leading-7 text-[#171512]">Challenge</h3>
+        <p className="mt-5 text-sm leading-7 text-neutral-600">
+          Ponta-related information was spread across multiple services and screens. Users needed a central place to
+          understand their point status, point history, earning opportunities, usage options, campaigns, and related
+          services.
+        </p>
+      </article>
+
+      <article className="border-t border-black/10 pt-6">
+        <h3 className="text-xl font-semibold leading-7 text-[#171512]">Product Direction</h3>
+        <div className="mt-5 space-y-5 text-sm leading-7 text-neutral-600">
+          <p>Position au Ponta Portal as a central point hub.</p>
+          <p>
+            The portal needed to make point value visible, understandable, and actionable by connecting point balance,
+            point history, earning and usage guidance, benefit communication, and cross-service navigation.
+          </p>
+        </div>
+      </article>
+
+      <article className="border-t border-black/10 pt-6">
+        <h3 className="text-xl font-semibold leading-7 text-[#171512]">My Contribution</h3>
+        <div className="mt-5 grid gap-3">
+          {[
+            "Structured product requirements around point status, history, campaigns, and service navigation.",
+            "Clarified user flows across portal home, point history, earn, use, and campaign-related pages.",
+            "Coordinated with business, design, system, and service teams.",
+            "Supported specification review, issue handling, testing, and release preparation."
+          ].map((item) => (
+            <p key={item} className="border border-black/10 p-4 text-sm leading-7 text-neutral-600">
+              {item}
+            </p>
+          ))}
+        </div>
+      </article>
+
+      <article className="border-t border-black/10 pt-6">
+        <h3 className="text-xl font-semibold leading-7 text-[#171512]">Outcome</h3>
+        <p className="mt-5 text-sm leading-7 text-neutral-600">
+          Established au Ponta Portal as a central loyalty touchpoint where users could check points, understand point
+          activity, discover ways to earn and use points, and move to related services.
+        </p>
+      </article>
+    </div>
+  );
+}
+
 function ImprovementTimeline() {
   return (
-    <div className="grid gap-8">
-      {postLaunchEvolution.map(([title, body, image], index) => (
-        <article key={title} className="grid gap-8 border-t border-black/10 pt-8 md:grid-cols-[0.78fr_1fr] md:items-center">
+    <div className="grid gap-x-8 gap-y-10 md:grid-cols-2">
+      {postLaunchEvolution.map((item, index) => (
+        <article
+          key={item.title}
+          className={`grid gap-6 border-t border-black/10 pt-8 ${
+            item.fullWidth ? "md:col-span-2 md:grid-cols-[0.42fr_1fr]" : "sm:grid-cols-[1fr_0.72fr]"
+          } sm:items-center`}
+        >
           <div>
             <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-tomato">
               Evolution {String(index + 1).padStart(2, "0")}
             </p>
-            <h3 className="mt-4 text-xl font-semibold leading-7 text-[#171512]">{title}</h3>
-            <p className="mt-4 text-sm leading-7 text-neutral-600">{body}</p>
+            <h3 className="mt-4 text-lg font-semibold leading-7 text-[#171512]">{item.title}</h3>
+            <p className="mt-4 text-sm leading-7 text-neutral-600">{item.body}</p>
           </div>
-          {image ? (
+          {item.images ? (
+            <div className="grid gap-5 sm:grid-cols-4">
+              {item.images.map(([src, alt]) => (
+                <figure key={src} className="flex justify-center overflow-hidden">
+                  <img src={assetPath(src)} alt={alt} className="h-auto max-h-[360px] w-auto max-w-[220px]" />
+                </figure>
+              ))}
+            </div>
+          ) : item.image ? (
             <figure className="flex justify-center overflow-hidden">
               <img
-                src={assetPath(image)}
-                alt="Lawson Integration screen"
+                src={assetPath(item.image)}
+                alt={item.imageAlt}
                 className="h-auto max-h-[360px] w-auto max-w-[220px]"
               />
             </figure>
-          ) : (
-            <figure className="flex aspect-[16/9] items-center justify-center border border-dashed border-black/20 px-6 text-center">
-              <figcaption className="text-xs font-bold uppercase tracking-[0.22em] text-neutral-400">
-                Placeholder image
-              </figcaption>
-            </figure>
-          )}
+          ) : null}
         </article>
       ))}
     </div>
@@ -381,10 +485,6 @@ export default function AuPontaPortalPage() {
             <SnapshotStrip />
           </Section>
 
-          <section className="border-t border-black/10 py-14 md:py-20">
-            <ProductImage src={`${imageBase}/au_ponta_pc.png`} alt="au Ponta Portal desktop overview" />
-          </section>
-
           <Section
             id="responsibilities"
             eyebrow="My Responsibilities"
@@ -410,36 +510,133 @@ export default function AuPontaPortalPage() {
           >
             <Timeline />
             <KeyPortalExperiences />
+            <PortalLaunchDetail />
           </Section>
 
           <Section
             id="benefits"
             eyebrow="Highlight 02"
             title="au / UQ User Benefits"
-            body="The benefit experience had to explain campaign entry, eligibility, entry-state handling, reward conditions, remaining reward caps, and cross-service entry paths."
+            body="The au / UQ Benefits project extended au Ponta Portal into a reward communication experience connected with au PAY usage."
           >
-            <div className="grid gap-10 lg:grid-cols-[0.78fr_1fr] lg:items-center">
-              <PhoneScreenshotGrid
-                columns="grid-cols-3"
-                images={[
-                  [`${imageBase}/au_uq_campaign_1.PNG`, "au UQ campaign entry screen"],
-                  [`${imageBase}/au_uq_campaign_2.jpg`, "au UQ campaign condition screen"],
-                  [`${imageBase}/au_uq_campaign_3.jpg`, "au UQ campaign reward screen"]
-                ]}
-              />
-              <div className="grid gap-5">
-                {[
-                  ["Eligibility and entry states", "Clarified whether users could participate, had already entered, or needed to complete another action."],
-                  ["Reward condition explanation", "Structured condition copy so users could understand how benefits were earned and what still remained."],
-                  ["Remaining reward cap display", "Prepared a display pattern for monthly cap visibility without overwhelming the page."],
-                  ["Cross-service entry paths", "Connected au PAY, au Ponta Portal, My au, and My UQ into a more coherent benefit journey."]
-                ].map(([title, body]) => (
-                  <article key={title} className="border-t border-black/10 pt-5">
-                    <h3 className="text-lg font-semibold text-[#171512]">{title}</h3>
-                    <p className="mt-4 text-sm leading-7 text-neutral-600">{body}</p>
-                  </article>
-                ))}
+            <div className="mx-auto max-w-5xl space-y-10">
+              <div className="space-y-5 text-base leading-8 text-neutral-600">
+                <p>
+                  The goal was to help eligible au and UQ users notice reward opportunities, enter the benefit
+                  program, understand conditions, and check reward-related information across multiple service
+                  touchpoints.
+                </p>
               </div>
+
+              <article className="border-t border-black/10 pt-6">
+                <h3 className="text-xl font-semibold leading-7 text-[#171512]">Challenge</h3>
+                <div className="mt-5 space-y-5 text-sm leading-7 text-neutral-600">
+                  <p>
+                    The benefit looked simple to users, but the service logic behind it was complex. Users needed to
+                    understand whether they were eligible, whether they had entered the benefit, when the benefit
+                    applied, which payments were covered, how much reward potential remained, and where to check
+                    expected or confirmed points.
+                  </p>
+                  <p>
+                    The product challenge was to translate complex eligibility, entry, payment, and reward rules into a
+                    clear user-facing experience.
+                  </p>
+                </div>
+              </article>
+
+              <article className="border-t border-black/10 pt-6">
+                <h3 className="text-xl font-semibold leading-7 text-[#171512]">Key Experience Flow</h3>
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  {benefitFlow.map((step, index) => (
+                    <div key={step} className="flex items-center gap-3">
+                      <span className="border border-black/10 px-3 py-2 text-xs font-semibold text-neutral-600">
+                        {step}
+                      </span>
+                      {index < benefitFlow.length - 1 ? <span className="text-sm font-bold text-tomato">→</span> : null}
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-8 grid gap-12 md:grid-cols-3">
+                  {[
+                    [`${imageBase}/au_uq_campaign_1.PNG`, "au UQ campaign entry screen"],
+                    [`${imageBase}/au_uq_campaign_2.jpg`, "au UQ campaign condition screen"],
+                    [`${imageBase}/au_uq_campaign_3.jpg`, "au UQ campaign reward screen"]
+                  ].map(([src, alt]) => (
+                    <figure key={src} className="mx-auto w-1/2 overflow-hidden">
+                      <img src={assetPath(src)} alt={alt} className="h-auto w-full" />
+                    </figure>
+                  ))}
+                </div>
+              </article>
+
+                <article className="border-t border-black/10 pt-6">
+                  <h3 className="text-xl font-semibold leading-7 text-[#171512]">Product Direction</h3>
+                  <div className="mt-5 space-y-5 text-sm leading-7 text-neutral-600">
+                    <p>Translate complex benefit rules into a simple user-facing journey.</p>
+                    <p>
+                      Instead of exposing system logic to users, the experience needed to clearly communicate: “Am I
+                      eligible?” “Have I entered?” “What should I do next?” “How much benefit can I still receive?”
+                      “Where can I confirm the result?”
+                    </p>
+                  </div>
+                </article>
+
+                <article className="border-t border-black/10 pt-6">
+                  <h3 className="text-xl font-semibold leading-7 text-[#171512]">My Contribution</h3>
+                  <div className="mt-5 space-y-5 text-sm leading-7 text-neutral-600">
+                    <p>
+                      As Product Manager, my role focused on clarifying business and service requirements, organizing
+                      user-facing states, and coordinating delivery across multiple systems and touchpoints.
+                    </p>
+                    <div className="grid gap-3 md:grid-cols-2">
+                      {benefitContributions.map((item) => (
+                        <p key={item} className="border border-black/10 p-4">
+                          {item}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+
+                <article className="border-t border-black/10 pt-6">
+                  <h3 className="text-xl font-semibold leading-7 text-[#171512]">Product Complexity</h3>
+                  <p className="mt-5 text-sm leading-7 text-neutral-600">
+                    The biggest challenge was not only creating a campaign page, but making the benefit work reliably
+                    across many user states and service touchpoints.
+                  </p>
+                  <div className="mt-6 grid gap-4 md:grid-cols-2">
+                    {benefitComplexity.map(([title, body]) => (
+                      <div key={title} className="border border-black/10 p-5">
+                        <h4 className="text-base font-semibold leading-6 text-[#171512]">{title}</h4>
+                        <p className="mt-3 text-sm leading-7 text-neutral-600">{body}</p>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+
+                <article className="border-t border-black/10 pt-6">
+                  <h3 className="text-xl font-semibold leading-7 text-[#171512]">Design / Product Intention</h3>
+                  <p className="mt-5 text-sm leading-7 text-neutral-600">
+                    The experience needed to make the benefit feel easy to understand, even when the underlying rules
+                    were complex. The goal was to help users recognize the benefit, understand their current state, and
+                    know the next action without exposing internal system logic.
+                  </p>
+                </article>
+
+                <article className="border-t border-black/10 pt-6">
+                  <h3 className="text-xl font-semibold leading-7 text-[#171512]">Reflection</h3>
+                  <div className="mt-5 space-y-5 text-sm leading-7 text-neutral-600">
+                    <p>
+                      This project taught me that product management in a large-scale fintech ecosystem is often about
+                      simplifying complexity.
+                    </p>
+                    <p>
+                      A good benefit experience is not only about offering rewards. It also needs clear eligibility
+                      communication, reliable state handling, understandable reward feedback, and careful coordination
+                      between business rules and system behavior.
+                    </p>
+                  </div>
+                </article>
             </div>
           </Section>
 

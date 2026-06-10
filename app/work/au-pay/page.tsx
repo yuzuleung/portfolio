@@ -8,92 +8,68 @@ export const metadata: Metadata = {
 };
 
 const tags = [
-  "Product Management",
   "Fintech",
-  "Payment Experience",
-  "Frontend Development",
-  "Cross-functional Delivery"
+  "Payment",
+  "Product Management",
+  "Frontend Engineering",
+  "Requirement Definition"
 ];
 
 const imageBase = "/assets/au-pay";
 
-const launchTimeline = [
-  ["01", "Frame the problem", "Clarified user pain points across payment, charge, transaction history, and identity-related flows."],
-  ["02", "Structure requirements", "Organized product rules, edge cases, UI states, and service constraints into delivery-ready requirements."],
-  ["03", "Define user flows", "Mapped key payment and charge journeys so users could understand status, next action, and completion states."],
-  ["04", "Align stakeholders", "Coordinated with business, design, engineering, QA, and partner teams to keep product decisions consistent."],
-  ["05", "Prepare release", "Supported specification review, frontend implementation checks, issue handling, testing, and release readiness."]
+const roleCards = [
+  ["Requirement Definition", "Clarified product requirements, user states, screen behavior, and edge cases."],
+  ["Frontend Implementation", "Developed and maintained user-facing web interfaces for au PAY related flows."],
+  ["User Flow Clarification", "Organized how users move through payment, charge, registration, verification, and history experiences."],
+  ["Stakeholder Coordination", "Worked with marketing, designers, engineers, QA, business teams, and external partners."],
+  ["Release Support", "Supported testing, issue handling, release preparation, and post-release follow-up."],
+  ["UX-minded Delivery", "Identified friction during implementation and helped make flows clearer and more reliable."]
 ];
 
-const journeySteps = [
-  ["Entry", "Users arrive from au PAY, campaign touchpoints, partner services, or payment-related navigation."],
-  ["Understand", "They need to quickly understand balance, charge options, transaction status, and identity-related requirements."],
-  ["Act", "They complete payment, charge, verification, or partner-service actions with clear confirmation and recovery paths."],
-  ["Follow up", "They return to review transaction history, check status, and continue related financial actions."]
+const transactionContributions = [
+  "Clarified requirements and screen behavior",
+  "Organized display conditions and edge cases",
+  "Coordinated with marketing, design, engineer, and QA teams",
+  "Implemented frontend components and page behavior",
+  "Supported testing, issue handling, and release preparation"
 ];
 
-const responsibilities = [
-  ["Requirement Definition", "Structured product requirements around user states, service rules, edge cases, and implementation behavior."],
-  ["User Flow Clarification", "Clarified how users move across payment, charge, transaction history, identity verification, and partner flows."],
-  ["Stakeholder Management", "Aligned product goals, design direction, system constraints, QA concerns, and business-side expectations."],
-  ["Project Coordination", "Kept dependencies visible across teams so decisions, open questions, and delivery timing stayed clear."],
-  ["Release Planning", "Supported release through scope confirmation, issue handling, testing, and user-facing communication checks."],
-  ["Frontend Development", "Implemented and reviewed frontend behavior while bridging product requirements and technical feasibility."]
+const chargeContributions = [
+  "Implemented frontend flows for charge-related experiences",
+  "Clarified requirements for different charge methods",
+  "Reviewed error states and edge cases",
+  "Coordinated with backend, QA, and external service teams",
+  "Supported release and issue resolution",
+  "Helped translate technical constraints into user-facing behavior"
 ];
 
-const problemCards = [
-  ["Complex financial flows", "Payment, charge, and verification experiences required clear guidance across many user states."],
-  ["High reliability expectations", "Users expect financial actions to feel predictable, recoverable, and easy to confirm."],
-  ["Fragmented entry points", "Users could arrive from payment screens, campaigns, transaction history, partner flows, and account-related pages."],
-  ["Operational complexity", "Business rules, system constraints, QA coverage, and release timing had to be translated into stable product behavior."]
+const identityContributions = [
+  "Clarified user states and required actions",
+  "Organized screen behavior and transition logic",
+  "Coordinated requirements with marketing, system, and QA teams",
+  "Supported delivery and release preparation",
+  "Helped ensure the flow was understandable from the user's perspective"
 ];
 
-const goalCards = [
-  ["Make actions clear", "Help users understand what they can do, what state they are in, and what should happen next."],
-  ["Support trust", "Design and implement financial flows with careful attention to confirmation, status visibility, and edge cases."],
-  ["Connect delivery", "Bridge product planning, frontend implementation, QA review, and stakeholder alignment through release."]
+const chargeComplexity = [
+  ["Multiple Charge Methods", "Point, credit card, and bank-related charge flows had different rules and constraints."],
+  ["External Integration", "Some flows depended on external services and partner-side behavior."],
+  ["Error Handling", "Users needed clear feedback when charge actions could not be completed."],
+  ["Release Reliability", "Payment-related flows required careful testing, QA, and release coordination."]
 ];
 
-const keyProductExperiences = [
-  [
-    "Transaction History",
-    "A clearer way for users to review payment activity, status, service context, and recent financial actions.",
-    "History"
-  ],
-  [
-    "Payment Experience",
-    "Interface behavior that helps users complete payment actions with confidence and understand the result.",
-    "Pay"
-  ],
-  [
-    "Charge Experience",
-    "Charge flows designed around different funding methods, conditions, limits, and user expectations.",
-    "Charge"
-  ],
-  [
-    "Identity Verification",
-    "Sensitive verification flows that require trust, clear next steps, and careful handling of states.",
-    "Verify"
-  ],
-  [
-    "Partner Integration",
-    "Connected external service journeys with au PAY behavior in a way that remained coherent for users.",
-    "Partner"
-  ],
-  [
-    "Release Support",
-    "Cross-functional checks around requirements, implementation behavior, QA feedback, and launch readiness.",
-    "Release"
-  ]
+const identityComplexity = [
+  ["User State Handling", "Different verification states required different screen behavior."],
+  ["Regulated Flow", "The experience needed to respect financial service requirements."],
+  ["Error and Recovery", "Users needed understandable feedback when actions could not be completed."],
+  ["Cross-team Delivery", "The project required alignment across product, system, QA, and operational teams."]
 ];
 
-const postLaunchEvolution = [
-  ["Transaction History Renewal", "Improved information structure, status visibility, and transaction review behavior."],
-  ["Payment & Charge Refinements", "Supported refinements across point charge, credit charge, bank charge, and related payment paths."],
-  ["Identity Verification Updates", "Reviewed sensitive user states, edge cases, and release behavior for verification-related flows."],
-  ["Partner Service Integration", "Supported integration planning and user-facing behavior for external service connections."],
-  ["Operational Improvements", "Helped clarify requirements, QA concerns, issue handling, and release communication."],
-  ["Frontend Quality", "Implemented and reviewed UI behavior to keep product intent aligned with real interface states."]
+const supportingContributions = [
+  ["Amazon Integration", "Supported requirement clarification, UI/UX design, and delivery coordination for an external service integration."],
+  ["Concur Integration", "Supported requirement clarification, UI/UX design, and delivery coordination for an external service integration."],
+  ["Charge Before Payment", "Supported charge-before-paying product flows from mini-app experiences."],
+  ["Pay for Prepaid Card", "Supported frontend development for the Pay for Prepaid Card project."]
 ];
 
 function Section({
@@ -125,142 +101,178 @@ function Section({
   );
 }
 
-function ProductImage({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
+function RoleGrid() {
   return (
-    <figure className={`overflow-hidden ${className}`}>
+    <div className="grid gap-5 md:grid-cols-3 xl:grid-cols-6">
+      {roleCards.map(([title, body], index) => (
+        <article key={title} className="border-t border-black/10 pt-5">
+          <p className="text-[0.68rem] font-bold tracking-[0.18em] text-tomato">{String(index + 1).padStart(2, "0")}</p>
+          <h3 className="mt-4 text-sm font-semibold leading-6 text-[#171512]">{title}</h3>
+          <p className="mt-4 text-sm leading-7 text-neutral-600">{body}</p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function BulletCards({ items }: { items: string[] }) {
+  return (
+    <div className="grid gap-3 md:grid-cols-2">
+      {items.map((item) => (
+        <p key={item} className="border border-black/10 p-4 text-sm leading-7 text-neutral-600">
+          {item}
+        </p>
+      ))}
+    </div>
+  );
+}
+
+function CompactCards({ items }: { items: string[][] }) {
+  return (
+    <div className="grid gap-4 md:grid-cols-2">
+      {items.map(([title, body]) => (
+        <article key={title} className="border border-black/10 p-5">
+          <h4 className="text-base font-semibold leading-6 text-[#171512]">{title}</h4>
+          <p className="mt-3 text-sm leading-7 text-neutral-600">{body}</p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
+function ScreenshotGrid({
+  images,
+  columns = "md:grid-cols-3",
+  gap = "gap-8",
+  figureClassName = "flex justify-center overflow-hidden",
+  imageClassName = "h-auto max-h-[360px] w-auto max-w-[220px]"
+}: {
+  images: Array<[string, string]>;
+  columns?: string;
+  gap?: string;
+  figureClassName?: string;
+  imageClassName?: string;
+}) {
+  return (
+    <div className={`mt-10 grid ${gap} ${columns}`}>
+      {images.map(([src, alt]) => (
+        <figure key={src} className={figureClassName}>
+          <img src={assetPath(src)} alt={alt} className={imageClassName} />
+        </figure>
+      ))}
+    </div>
+  );
+}
+
+function OutcomeWithImage({ outcome, image, alt }: { outcome: string; image: string; alt: string }) {
+  return (
+    <div className="mt-5 grid gap-8 md:grid-cols-[1fr_0.62fr] md:items-center">
+      <p className="text-sm leading-7 text-neutral-600">{outcome}</p>
+      <figure className="flex justify-center overflow-hidden">
+        <img src={assetPath(image)} alt={alt} className="h-auto max-h-[360px] w-auto max-w-[220px]" />
+      </figure>
+    </div>
+  );
+}
+
+function BorderedScreenshot({ src, alt }: { src: string; alt: string }) {
+  return (
+    <figure className="mx-auto w-full max-w-[230px] overflow-hidden border border-[#171512] bg-white">
       <img src={assetPath(src)} alt={alt} className="h-auto w-full" />
     </figure>
   );
 }
 
-function SnapshotStrip() {
+function BorderedScreenshotGrid({ images }: { images: Array<[string, string]> }) {
   return (
-    <div className="grid gap-8 md:grid-cols-2">
-      <article className="border-t border-black/10 pt-6">
-        <p className="text-xs font-bold uppercase tracking-[0.22em] text-tomato">The Problem</p>
-        <p className="mt-5 text-base leading-8 text-neutral-600">
-          au PAY is a large-scale fintech product where everyday payment actions need to stay clear across many services,
-          entry points, states, and operational constraints.
-        </p>
-        <div className="mt-7 grid gap-4">
-          {problemCards.map(([title, body]) => (
-            <div key={title} className="border border-black/10 p-5">
-              <h3 className="text-base font-semibold leading-6 text-[#171512]">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-neutral-600">{body}</p>
-            </div>
-          ))}
-        </div>
-      </article>
-      <article className="border-t border-black/10 pt-6">
-        <p className="text-xs font-bold uppercase tracking-[0.22em] text-tomato">The Goal</p>
-        <p className="mt-5 text-base leading-8 text-neutral-600">
-          Improve product experiences across payment, charge, transaction history, verification, and partner-service
-          flows through product planning, frontend development, and cross-functional delivery.
-        </p>
-        <div className="mt-7 grid gap-4">
-          {goalCards.map(([title, body]) => (
-            <div key={title} className="border border-black/10 p-5">
-              <h3 className="text-base font-semibold leading-6 text-[#171512]">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-neutral-600">{body}</p>
-            </div>
-          ))}
-        </div>
-      </article>
-    </div>
-  );
-}
-
-function Timeline() {
-  return (
-    <div className="grid gap-4 md:grid-cols-5">
-      {launchTimeline.map(([step, title, body]) => (
-        <article key={step} className="border border-black/10 p-5">
-          <p className="font-barlow text-3xl font-semibold leading-none text-tomato">{step}</p>
-          <h3 className="mt-6 text-base font-semibold leading-6 text-[#171512]">{title}</h3>
-          <p className="mt-4 text-sm leading-7 text-neutral-600">{body}</p>
-        </article>
+    <div className="mt-10 grid gap-8 md:grid-cols-3">
+      {images.map(([src, alt]) => (
+        <BorderedScreenshot key={src} src={src} alt={alt} />
       ))}
     </div>
   );
 }
 
-function JourneyFlow() {
+function AmazonContributionCard() {
   return (
-    <div className="grid gap-4 md:grid-cols-4">
-      {journeySteps.map(([title, body], index) => (
-        <article key={title} className="relative border border-black/10 bg-white p-6">
-          {index < journeySteps.length - 1 ? (
-            <span className="absolute -right-3 top-8 hidden text-sm font-bold text-tomato md:block">→</span>
-          ) : null}
-          <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-tomato">
-            Step {String(index + 1).padStart(2, "0")}
-          </p>
-          <h3 className="mt-5 text-lg font-semibold text-[#171512]">{title}</h3>
-          <p className="mt-4 text-sm leading-7 text-neutral-600">{body}</p>
-        </article>
-      ))}
-    </div>
-  );
-}
-
-function ResponsibilityGrid() {
-  return (
-    <div className="grid gap-5 md:grid-cols-3 xl:grid-cols-6">
-      {responsibilities.map(([title, body], index) => (
-        <article key={title} className="border-t border-black/10 pt-5">
-          <p className="text-[0.68rem] font-bold tracking-[0.18em] text-tomato">{String(index + 1).padStart(2, "0")}</p>
-          <h3 className="mt-4 whitespace-nowrap text-sm font-semibold leading-6 text-[#171512]">{title}</h3>
-          <p className="mt-4 text-sm leading-7 text-neutral-600">{body}</p>
-        </article>
-      ))}
-    </div>
-  );
-}
-
-function KeyProductExperiences() {
-  return (
-    <div className="mt-12">
-      <div className="mb-8 max-w-3xl">
-        <h3 className="text-lg font-semibold leading-7 text-[#171512]">Key au PAY Experiences</h3>
+    <article className="grid gap-8 border border-black/10 p-6 md:grid-cols-[1fr_0.58fr] md:items-center">
+      <div>
+        <h4 className="text-base font-semibold leading-6 text-[#171512]">Amazon Integration</h4>
         <p className="mt-3 text-sm leading-7 text-neutral-600">
-          Product areas prepared for more detailed screenshots and final case study evidence.
+          Supported requirement clarification, UI/UX design, and delivery coordination for an external service
+          integration.
         </p>
       </div>
-      <div className="grid gap-x-7 gap-y-12 md:grid-cols-3 lg:grid-cols-6">
-        {keyProductExperiences.map(([title, body, label]) => (
-          <article key={title}>
-            <h4 className="text-sm font-semibold leading-6 text-[#171512]">{title}</h4>
-            <p className="mt-3 min-h-28 text-xs leading-6 text-neutral-600">{body}</p>
-            <figure className="mt-7 flex aspect-[9/16] items-center justify-center border border-dashed border-black/20 px-4 text-center">
-              <figcaption className="text-xs font-bold uppercase tracking-[0.18em] text-neutral-400">{label}</figcaption>
-            </figure>
-          </article>
-        ))}
-      </div>
-    </div>
+      <figure className="flex justify-center overflow-hidden">
+        <img
+          src={assetPath(`${imageBase}/pay_amazon.png`)}
+          alt="au PAY Amazon integration screen"
+          className="h-auto max-h-[360px] w-auto max-w-[220px]"
+        />
+      </figure>
+    </article>
   );
 }
 
-function ImprovementTimeline() {
+function HighlightBlock({
+  eyebrow,
+  title,
+  intro,
+  challenge,
+  direction,
+  contribution,
+  complexity,
+  outcome,
+  outcomeImage,
+  screens
+}: {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  challenge: ReactNode;
+  direction: ReactNode;
+  contribution: string[];
+  complexity?: string[][];
+  outcome: string;
+  outcomeImage?: ReactNode;
+  screens?: ReactNode;
+}) {
   return (
-    <div className="grid gap-8">
-      {postLaunchEvolution.map(([title, body], index) => (
-        <article key={title} className="grid gap-8 border-t border-black/10 pt-8 md:grid-cols-[0.78fr_1fr] md:items-center">
-          <div>
-            <p className="text-[0.68rem] font-bold uppercase tracking-[0.18em] text-tomato">
-              Evolution {String(index + 1).padStart(2, "0")}
-            </p>
-            <h3 className="mt-4 text-xl font-semibold leading-7 text-[#171512]">{title}</h3>
-            <p className="mt-4 text-sm leading-7 text-neutral-600">{body}</p>
-          </div>
-          <figure className="flex aspect-[16/9] items-center justify-center border border-dashed border-black/20 px-6 text-center">
-            <figcaption className="text-xs font-bold uppercase tracking-[0.22em] text-neutral-400">
-              Placeholder image
-            </figcaption>
-          </figure>
+    <Section id={eyebrow.toLowerCase().replaceAll(" ", "-")} eyebrow={eyebrow} title={title} body={intro}>
+      <div className="mx-auto max-w-5xl space-y-10">
+        <article className="border-t border-black/10 pt-6">
+          <h3 className="text-xl font-semibold leading-7 text-[#171512]">Challenge</h3>
+          <div className="mt-5 space-y-5 text-sm leading-7 text-neutral-600">{challenge}</div>
         </article>
-      ))}
-    </div>
+
+        <article className="border-t border-black/10 pt-6">
+          <h3 className="text-xl font-semibold leading-7 text-[#171512]">Product Direction</h3>
+          <div className="mt-5 space-y-5 text-sm leading-7 text-neutral-600">{direction}</div>
+        </article>
+
+        <article className="border-t border-black/10 pt-6">
+          <h3 className="text-xl font-semibold leading-7 text-[#171512]">My Contribution</h3>
+          <div className="mt-5">
+            <BulletCards items={contribution} />
+          </div>
+        </article>
+
+        {complexity ? (
+          <article className="border-t border-black/10 pt-6">
+            <h3 className="text-xl font-semibold leading-7 text-[#171512]">Product Complexity</h3>
+            <div className="mt-6">
+              <CompactCards items={complexity} />
+            </div>
+          </article>
+        ) : null}
+
+        <article className="border-t border-black/10 pt-6">
+          <h3 className="text-xl font-semibold leading-7 text-[#171512]">Outcome</h3>
+          {outcomeImage ?? <p className="mt-5 text-sm leading-7 text-neutral-600">{outcome}</p>}
+          {screens}
+        </article>
+      </div>
+    </Section>
   );
 }
 
@@ -283,8 +295,9 @@ export default function AuPayPage() {
               au PAY
             </h1>
             <p className="mt-8 max-w-3xl text-lg leading-8 text-neutral-600 md:text-xl md:leading-9">
-              Delivering fintech product improvements through product management, frontend development, and
-              cross-functional collaboration.
+              au PAY is a fintech product used for everyday payments, charge flows, transaction review,
+              identity-related actions, and partner services. My work focused on delivering user-facing fintech
+              improvements across payment, charge, identity, and transaction experiences.
             </p>
             <div className="mt-10 grid max-w-4xl gap-x-12 gap-y-5 border-y border-black/10 py-6 md:grid-cols-3">
               <article>
@@ -292,27 +305,25 @@ export default function AuPayPage() {
                 <p className="mt-3 text-sm leading-6 text-neutral-600">
                   Product Manager
                   <br />
-                  Front-End Engineer
-                  <br />
-                  Project Coordinator
+                  Frontend Engineer
                 </p>
               </article>
               <article>
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-tomato">Timeline</p>
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-tomato">Period</p>
                 <p className="mt-3 text-sm leading-6 text-neutral-600">
-                  2022.03–2026
+                  2022.12 - 2024.09
                   <br />
-                  Ongoing improvements
+                  2025.10 - 2026.03
                 </p>
               </article>
               <article>
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-tomato">Scope</p>
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-tomato">Product Area</p>
                 <p className="mt-3 text-sm leading-6 text-neutral-600">
-                  Product improvements
+                  Payment / Charge
                   <br />
-                  Frontend delivery
+                  Transaction History
                   <br />
-                  Release coordination
+                  Identity Verification
                 </p>
               </article>
             </div>
@@ -329,86 +340,152 @@ export default function AuPayPage() {
 
         <section className="mx-auto max-w-6xl">
           <Section
-            id="snapshot"
-            eyebrow="Project Overview"
-            title="A large-scale payment product shaped through product planning and frontend delivery."
-            body="au PAY is a fintech product used for everyday payments, charge flows, transaction review, identity-related actions, and partner services. My work focused on making complex product behavior clearer, more reliable, and easier to deliver across teams."
+            id="overview"
+            eyebrow="Overview"
+            title="Building reliable fintech experiences inside a large-scale payment product."
+            body="au PAY is a large-scale mobile payment service used across daily payment, charge, point, and transaction experiences. My work focused on translating complex business and system requirements into reliable user-facing flows, while coordinating across marketing, design, engineer, QA, and external service teams."
             noTopBorder
           >
             <p className="mx-auto -mt-6 mb-12 max-w-3xl text-center text-xs italic leading-6 text-neutral-500">
               *Due to confidentiality restrictions, internal business logic, metrics, and system specifications have
               been simplified or omitted. Public-facing product screenshots are used where possible.
             </p>
-            <SnapshotStrip />
           </Section>
 
-          <section className="border-t border-black/10 py-14 md:py-20">
-            <ProductImage src={`${imageBase}/au_pay_pc.png`} alt="au PAY desktop overview" />
-          </section>
-
           <Section
-            id="responsibilities"
-            eyebrow="My Responsibilities"
-            title="Owning product detail across planning, implementation, and release."
+            id="overall-role"
+            eyebrow="Overall Role"
+            title="My role was to connect product requirements with implementation reality."
           >
-            <ResponsibilityGrid />
+            <RoleGrid />
           </Section>
 
-          <Section
-            id="challenge"
-            eyebrow="Challenge"
-            title="The product needed to make financial actions clear, reliable, and release-ready."
-          >
-            <JourneyFlow />
-          </Section>
-
-          <Section
-            id="selected-projects"
+          <HighlightBlock
             eyebrow="Highlight 01"
-            title="Product Improvement Work"
-            body="The work focused on improving key product surfaces across transaction review, payment and charge flows, identity verification, partner integrations, and release coordination."
-          >
-            <Timeline />
-            <KeyProductExperiences />
-          </Section>
+            title="Transaction History Renewal"
+            intro="Renewing a core transaction history experience to make payment activity easier to understand and maintain."
+            challenge={
+              <>
+                <p>
+                  Transaction history is a core trust-building function in a payment product. Users need to check what
+                  happened, when it happened, how much was paid, and whether point or payment-related information is
+                  correct.
+                </p>
+                <p>
+                  The challenge was to improve a high-usage, high-trust area while handling complex data, display
+                  conditions, and release constraints.
+                </p>
+              </>
+            }
+            direction={
+              <>
+                <p>Make transaction activity easier to understand and more reliable to use.</p>
+                <p>
+                  The renewal needed to improve information clarity, screen structure, maintainability, and consistency
+                  across related payment and point experiences.
+                </p>
+              </>
+            }
+            contribution={transactionContributions}
+            outcome="Contributed to the renewal of a core user-facing history experience, improving clarity, maintainability, and delivery quality for a key fintech flow."
+            outcomeImage={
+              <OutcomeWithImage
+                outcome="Contributed to the renewal of a core user-facing history experience, improving clarity, maintainability, and delivery quality for a key fintech flow."
+                image={`${imageBase}/pay_history.png`}
+                alt="au PAY transaction history screen"
+              />
+            }
+          />
+
+          <HighlightBlock
+            eyebrow="Highlight 02"
+            title="Charge Experience Improvements"
+            intro="Supporting reliable charge-related flows across point charge, credit charge, and bank charge experiences."
+            challenge={
+              <>
+                <p>
+                  Charge flows are sensitive fintech experiences. Users need to understand available methods, complete
+                  actions correctly, and recover from errors without losing trust.
+                </p>
+                <p>
+                  Different charge methods involved different business rules, external services, error states, and
+                  implementation constraints.
+                </p>
+              </>
+            }
+            direction={<p>Make charge flows reliable, understandable, and consistent across multiple payment methods.</p>}
+            contribution={chargeContributions}
+            complexity={chargeComplexity}
+            outcome="Helped deliver and maintain reliable charge experiences across multiple fintech flows while balancing user clarity, system constraints, and release quality."
+            screens={
+              <ScreenshotGrid
+                columns="grid-cols-2 md:grid-cols-4"
+                images={[
+                  [`${imageBase}/pay_charge_top.PNG`, "au PAY charge top screen"],
+                  [`${imageBase}/pay_credit_charge.PNG`, "au PAY credit charge screen"],
+                  [`${imageBase}/pay_credit_regist.PNG`, "au PAY credit card registration screen"],
+                  [`${imageBase}/pay_bank_charge.PNG`, "au PAY bank charge screen"]
+                ]}
+              />
+            }
+          />
+
+          <HighlightBlock
+            eyebrow="Highlight 03"
+            title="Identity Verification"
+            intro="Clarifying and delivering identity-related flows within a regulated fintech experience."
+            challenge={
+              <>
+                <p>
+                  Identity verification is a sensitive and regulated flow. Users need to understand required actions,
+                  current status, and next steps clearly.
+                </p>
+                <p>
+                  The challenge was to handle complex user states and service requirements without making the experience
+                  feel confusing or unstable.
+                </p>
+              </>
+            }
+            direction={<p>Make verification-related steps clearer, more reliable, and easier to complete.</p>}
+            contribution={identityContributions}
+            complexity={identityComplexity}
+            outcome="Contributed to a clearer and more reliable identity-related experience within au PAY."
+            screens={
+              <BorderedScreenshotGrid
+                images={[
+                  [`${imageBase}/pay_identity.png`, "au PAY identity verification screen"],
+                  [`${imageBase}/pay_identity_3.png`, "au PAY identity verification guide screen"],
+                  [`${imageBase}/pay_identity_4.png`, "au PAY identity verification status screen"]
+                ]}
+              />
+            }
+          />
 
           <Section
-            id="post-launch-evolution"
-            eyebrow="Post-launch Evolution"
-            title="Continuously improving a large-scale fintech product through delivery and refinement."
-            body="After each release, the work continued through product refinements, operational follow-up, QA feedback, frontend quality checks, and stakeholder coordination."
+            id="supporting-contributions"
+            eyebrow="Highlight 04"
+            title="au PAY&Amazon and other UI/UX Improvements"
+            body="Alongside the main projects, I also contributed to other payment-related initiatives and external integration work."
           >
-            <ImprovementTimeline />
+            <div className="grid gap-4 md:grid-cols-2">
+              <AmazonContributionCard />
+              <CompactCards items={supportingContributions.slice(1)} />
+            </div>
           </Section>
 
-          <Section id="reflection" eyebrow="Reflection" title="Large-scale fintech work made reliability part of product design.">
+          <Section id="reflection" eyebrow="Reflection" title="Reliable fintech experiences are built through invisible details.">
             <div className="mx-auto max-w-4xl space-y-7 text-lg leading-9 text-neutral-600">
+              <p>Working on au PAY taught me that fintech product delivery is not only about building screens.</p>
               <p>
-                Working on au PAY taught me that payment product design is not only about completing a transaction.
+                A reliable payment experience depends on requirement clarity, edge-case handling, error communication,
+                system feasibility, frontend quality, and careful release coordination.
               </p>
               <p>
-                A good fintech experience needs to make status, conditions, recovery paths, and next actions visible
-                before users feel uncertain.
-              </p>
-              <p>
-                This work helped me connect product thinking, frontend engineering, stakeholder management, and release
-                discipline inside a large-scale digital service.
+                My strength was working between product and engineering: understanding user-facing expectations,
+                clarifying ambiguous requirements, and turning complex fintech flows into stable, usable experiences.
               </p>
             </div>
           </Section>
-
-          <section className="border-t border-black/10 py-14 md:py-20">
-            <div className="mx-auto max-w-4xl text-center">
-              <p className="text-xs font-bold uppercase tracking-[0.26em] text-tomato">Final CTA</p>
-              <h2 className="mt-5 font-barlow text-[clamp(1.7rem,3vw,3rem)] font-semibold leading-[1.16]">
-                Real-world fintech product delivery
-              </h2>
-              <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
-                A product case study about improving payment, charge, transaction, and verification experiences inside
-                a large-scale fintech ecosystem.
-              </p>
-            </div>
-          </section>
         </section>
 
         <BottomBackToWork className="text-neutral-500" />
