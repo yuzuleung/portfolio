@@ -421,10 +421,10 @@ export default function AuPayPage() {
               <ScreenshotGrid
                 columns="grid-cols-2 md:grid-cols-4"
                 images={[
-                  [`${imageBase}/pay_charge_top.PNG`, "au PAY charge top screen"],
-                  [`${imageBase}/pay_credit_charge.PNG`, "au PAY credit charge screen"],
-                  [`${imageBase}/pay_credit_regist.PNG`, "au PAY credit card registration screen"],
-                  [`${imageBase}/pay_bank_charge.PNG`, "au PAY bank charge screen"]
+                  [`${imageBase}/pay_charge_top.png`, "au PAY charge top screen"],
+                  [`${imageBase}/pay_credit_charge.png`, "au PAY credit charge screen"],
+                  [`${imageBase}/pay_credit_regist.png`, "au PAY credit card registration screen"],
+                  [`${imageBase}/pay_bank_charge.png`, "au PAY bank charge screen"]
                 ]}
               />
             }
