@@ -6,21 +6,21 @@ export const projects = [
     type: "FINTECH / PRODUCT MANAGER / UI/UX / FRONT-END",
     image: assetPath("/assets/au-pay/au_pay_card.png"),
     alt: "au PAY project card",
-    href: "/work/au-pay",
+    href: "/projects/au-pay",
   },
   {
     title: "au Ponta Portal",
     type: "FINTECH / Loyalty / 0→1 / Data-driven",
     image: assetPath("/assets/au-ponta/au_ponta_card.png"),
     alt: "au Ponta Portal project card",
-    href: "/work/au-ponta-portal",
+    href: "/projects/au-ponta-portal",
   },
   {
     title: "Menu & Payment App",
     type: "UX Design / Mobile App",
     image: assetPath("/assets/Menu_App_img/Menu_App_img.png"),
     alt: "Mobile app prototype screens arranged across multiple phone mockups",
-    href: "/work/menu-payment-app",
+    href: "/projects/menu-payment-app",
   },
   {
     title: "Tokyo Culinary Atlas",
@@ -29,7 +29,7 @@ export const projects = [
       "/assets/Tokyo_International_Cuisine_Map/Tokyo_Culinary_Atlas.png",
     ),
     alt: "Tokyo Culinary Atlas data visualization cover",
-    href: "/work/tokyo-culinary-atlas",
+    href: "/projects/tokyo-culinary-atlas",
   },
   {
     title: "Lights Across the World",
@@ -38,14 +38,14 @@ export const projects = [
       "/assets/Lights_Across_the_World/Lights_Across_the_World.png",
     ),
     alt: "Lights Across the World ambient interaction cover",
-    href: "/work/lights-across-the-world",
+    href: "/projects/lights-across-the-world",
   },
   {
     title: "Dream World",
     type: "Interactive Experience / Emotional Storytelling",
     image: assetPath("/assets/dream-world/Dream_World_Card.jpg"),
     alt: "Dream World interactive experience cover",
-    href: "/work/dream-world",
+    href: "/projects/dream-world",
   },
   {
     title: "Between Reality and Virtual Worlds",
@@ -54,6 +54,6 @@ export const projects = [
       "/assets/reality-virtual-worlds/Reality_and_Virtual_Worlds.png",
     ),
     alt: "Between Reality and Virtual Worlds speculative design cover",
-    href: "/work/between-reality-and-virtual-worlds",
+    href: "/projects/between-reality-and-virtual-worlds",
   },
 ];

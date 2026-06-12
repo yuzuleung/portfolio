@@ -3,10 +3,10 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "WORK"
+  title: "PROJECTS"
 };
 
-export default function WorkPage() {
+export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-white px-5 py-28 text-ink md:px-16">
       <section className="mx-auto max-w-6xl">

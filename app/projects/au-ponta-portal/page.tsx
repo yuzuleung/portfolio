@@ -556,13 +556,13 @@ export default function AuPontaPortalPage() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-8 grid gap-12 md:grid-cols-3">
+                <div className="mt-8 grid gap-6 md:grid-cols-3 md:gap-8">
                   {[
                     [`${imageBase}/au_uq_campaign_1.PNG`, "au UQ campaign entry screen"],
                     [`${imageBase}/au_uq_campaign_2.jpg`, "au UQ campaign condition screen"],
                     [`${imageBase}/au_uq_campaign_3.jpg`, "au UQ campaign reward screen"]
                   ].map(([src, alt]) => (
-                    <figure key={src} className="mx-auto w-1/2 overflow-hidden">
+                    <figure key={src} className="mx-auto w-[62%] overflow-hidden md:w-[68%]">
                       <img src={assetPath(src)} alt={alt} className="h-auto w-full" />
                     </figure>
                   ))}

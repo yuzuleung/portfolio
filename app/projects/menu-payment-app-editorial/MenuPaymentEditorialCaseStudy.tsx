@@ -132,9 +132,9 @@ export function MenuPaymentEditorialCaseStudy() {
       <section className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-20 md:px-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:pb-32 lg:pt-24">
         <Reveal>
           <Link
-            href="/work"
+            href="/projects"
             className="inline-flex items-center text-[#ede7de]/55 transition hover:text-[#ede7de]"
-            aria-label="Back to work"
+            aria-label="Back to projects"
             data-cursor="button"
           >
             <span className="h-px w-8 bg-current" />

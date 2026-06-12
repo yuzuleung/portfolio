@@ -25,11 +25,11 @@ export default function Home() {
         </p>
         <div className="mt-12 flex flex-wrap justify-center gap-3">
           <Link
-            href="/work"
+            href="/projects"
             className="inline-flex min-h-12 items-center rounded-full bg-ink px-6 font-semibold text-white"
             data-cursor="button"
           >
-            View work
+            View projects
           </Link>
         </div>
       </section>

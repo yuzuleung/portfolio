@@ -90,7 +90,7 @@ function Section({
   return (
     <section id={id} className={`scroll-mt-32 py-14 md:py-20 ${noTopBorder ? "" : "border-t border-black/10"}`}>
       <div className="mx-auto mb-12 max-w-3xl text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.26em] text-tomato">{eyebrow}</p>
+        <p className="text-xs font-bold uppercase tracking-[0.26em] text-[#171512]">{eyebrow}</p>
         <h2 className="mt-5 font-barlow text-[clamp(1.7rem,3vw,3rem)] font-semibold leading-[1.16] text-[#171512]">
           {title}
         </h2>
@@ -106,7 +106,7 @@ function RoleGrid() {
     <div className="grid gap-5 md:grid-cols-3 xl:grid-cols-6">
       {roleCards.map(([title, body], index) => (
         <article key={title} className="border-t border-black/10 pt-5">
-          <p className="text-[0.68rem] font-bold tracking-[0.18em] text-tomato">{String(index + 1).padStart(2, "0")}</p>
+          <p className="text-[0.68rem] font-bold tracking-[0.18em] text-[#171512]">{String(index + 1).padStart(2, "0")}</p>
           <h3 className="mt-4 text-sm font-semibold leading-6 text-[#171512]">{title}</h3>
           <p className="mt-4 text-sm leading-7 text-neutral-600">{body}</p>
         </article>
@@ -140,30 +140,6 @@ function CompactCards({ items }: { items: string[][] }) {
   );
 }
 
-function ScreenshotGrid({
-  images,
-  columns = "md:grid-cols-3",
-  gap = "gap-8",
-  figureClassName = "flex justify-center overflow-hidden",
-  imageClassName = "h-auto max-h-[360px] w-auto max-w-[220px]"
-}: {
-  images: Array<[string, string]>;
-  columns?: string;
-  gap?: string;
-  figureClassName?: string;
-  imageClassName?: string;
-}) {
-  return (
-    <div className={`mt-10 grid ${gap} ${columns}`}>
-      {images.map(([src, alt]) => (
-        <figure key={src} className={figureClassName}>
-          <img src={assetPath(src)} alt={alt} className={imageClassName} />
-        </figure>
-      ))}
-    </div>
-  );
-}
-
 function OutcomeWithImage({ outcome, image, alt }: { outcome: string; image: string; alt: string }) {
   return (
     <div className="mt-5 grid gap-8 md:grid-cols-[1fr_0.62fr] md:items-center">
@@ -171,6 +147,21 @@ function OutcomeWithImage({ outcome, image, alt }: { outcome: string; image: str
       <figure className="flex justify-center overflow-hidden">
         <img src={assetPath(image)} alt={alt} className="h-auto max-h-[360px] w-auto max-w-[220px]" />
       </figure>
+    </div>
+  );
+}
+
+function TitledScreenshotGrid({ images }: { images: Array<[string, string, string]> }) {
+  return (
+    <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
+      {images.map(([src, alt, title]) => (
+        <figure key={src} className="text-center">
+          <figcaption className="mb-4 text-xs font-medium uppercase tracking-[0.16em] text-[#171512]">{title}</figcaption>
+          <div className="flex justify-center overflow-hidden">
+            <img src={assetPath(src)} alt={alt} className="h-auto max-h-[360px] w-auto max-w-[220px]" />
+          </div>
+        </figure>
+      ))}
     </div>
   );
 }
@@ -242,7 +233,7 @@ function HighlightBlock({
       <div className="mx-auto max-w-5xl space-y-10">
         <article className="border-t border-black/10 pt-6">
           <h3 className="text-xl font-semibold leading-7 text-[#171512]">Challenge</h3>
-          <div className="mt-5 space-y-5 text-sm leading-7 text-neutral-600">{challenge}</div>
+          <div className="mt-5 space-y-5 text-sm leading-7 text-[#171512]">{challenge}</div>
         </article>
 
         <article className="border-t border-black/10 pt-6">
@@ -301,7 +292,7 @@ export default function AuPayPage() {
             </p>
             <div className="mt-10 grid max-w-4xl gap-x-12 gap-y-5 border-y border-black/10 py-6 md:grid-cols-3">
               <article>
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-tomato">Role</p>
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-[#171512]">Role</p>
                 <p className="mt-3 text-sm leading-6 text-neutral-600">
                   Product Manager
                   <br />
@@ -309,7 +300,7 @@ export default function AuPayPage() {
                 </p>
               </article>
               <article>
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-tomato">Period</p>
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-[#171512]">Period</p>
                 <p className="mt-3 text-sm leading-6 text-neutral-600">
                   2022.12 - 2024.09
                   <br />
@@ -317,7 +308,7 @@ export default function AuPayPage() {
                 </p>
               </article>
               <article>
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-tomato">Product Area</p>
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-[#171512]">Product Area</p>
                 <p className="mt-3 text-sm leading-6 text-neutral-600">
                   Payment / Charge
                   <br />
@@ -418,13 +409,12 @@ export default function AuPayPage() {
             complexity={chargeComplexity}
             outcome="Helped deliver and maintain reliable charge experiences across multiple fintech flows while balancing user clarity, system constraints, and release quality."
             screens={
-              <ScreenshotGrid
-                columns="grid-cols-2 md:grid-cols-4"
+              <TitledScreenshotGrid
                 images={[
-                  [`${imageBase}/pay_charge_top.png`, "au PAY charge top screen"],
-                  [`${imageBase}/pay_credit_charge.png`, "au PAY credit charge screen"],
-                  [`${imageBase}/pay_credit_regist.png`, "au PAY credit card registration screen"],
-                  [`${imageBase}/pay_bank_charge.png`, "au PAY bank charge screen"]
+                  [`${imageBase}/pay_charge_top.png`, "au PAY charge top screen", "Charge TOP"],
+                  [`${imageBase}/pay_credit_charge.png`, "au PAY credit charge screen", "Credit Card Charge"],
+                  [`${imageBase}/pay_credit_regist.png`, "au PAY credit card registration screen", "Credit Card Regist"],
+                  [`${imageBase}/pay_bank_charge.png`, "au PAY bank charge screen", "Bank Charge"]
                 ]}
               />
             }
