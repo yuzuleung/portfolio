@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   },
   description: "Yong Liang portfolio.",
   icons: {
-    icon: assetPath("/favicon.png"),
-    shortcut: assetPath("/favicon.png"),
-    apple: assetPath("/favicon.png")
+    icon: assetPath("/favicon.ico"),
+    shortcut: assetPath("/favicon.ico"),
+    apple: assetPath("/favicon.ico")
   }
 };
 

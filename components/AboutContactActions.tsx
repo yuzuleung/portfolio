@@ -4,7 +4,7 @@ import { useState } from "react";
 import { assetPath } from "@/lib/assetPath";
 
 const emailAddress = "yliang.jp@gmail.com";
-const resumeHref = assetPath("/assets/resume/resume.pdf");
+const resumeHref = assetPath("/assets/resume/resume_en.pdf");
 
 function LinkedInIcon() {
   return (
