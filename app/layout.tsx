@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { CustomCursor } from "@/components/CustomCursor";
 import { PageTransitionLoader } from "@/components/PageTransitionLoader";
+import { PortfolioAssistantMount } from "@/components/PortfolioAssistantMount";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { assetPath } from "@/lib/assetPath";
@@ -25,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -39,6 +40,7 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <SiteFooter />
+        <PortfolioAssistantMount />
         <CustomCursor />
       </body>
     </html>

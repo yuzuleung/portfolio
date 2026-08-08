@@ -2,7 +2,6 @@ import path from "node:path";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
   outputFileTracingRoot: path.dirname(new URL(import.meta.url).pathname),
   images: {
     unoptimized: true
@@ -12,6 +11,7 @@ const nextConfig = {
   },
   ...(process.env.GITHUB_PAGES === "true"
     ? {
+        output: "export",
         basePath: "/portfolio",
         assetPrefix: "/portfolio/"
       }
