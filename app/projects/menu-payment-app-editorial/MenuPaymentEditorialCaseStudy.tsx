@@ -24,7 +24,7 @@ const finalScreens = [
   ["Order", "hi-fi_prototype/iphone16pro_img/06_Order.png"],
   ["Pay", "hi-fi_prototype/iphone16pro_img/07_Pay.png"],
   ["Confirm", "hi-fi_prototype/iphone16pro_img/09_Confirm.png"],
-  ["AI Ordering", "hi-fi_prototype/iphone16pro_img/11_AI%E6%B3%A8%E6%96%87%20-%20chat1.png"],
+  ["AI Ordering", "hi-fi_prototype/iphone16pro_img/11_AI_Ordering_chat1.png"],
   ["Account", "hi-fi_prototype/iphone16pro_img/12_Account.png"]
 ];
 const heroTags = ["Fintech", "Product Management", "UI/UX", "Front-End"];
@@ -347,7 +347,7 @@ export function MenuPaymentEditorialCaseStudy() {
 
           <div className="mb-16 grid gap-8 md:grid-cols-3">
             {[
-              ["AI Ordering", "hi-fi_prototype/iphone16pro_img/11_AI%E6%B3%A8%E6%96%87%20-%20chat1.png"],
+              ["AI Ordering", "hi-fi_prototype/iphone16pro_img/11_AI_Ordering_chat1.png"],
               ["Product Detail", "hi-fi_prototype/iphone16pro_img/03_Detail.png"],
               ["Payment", "hi-fi_prototype/iphone16pro_img/07_Pay.png"]
             ].map(([label, src]) => (

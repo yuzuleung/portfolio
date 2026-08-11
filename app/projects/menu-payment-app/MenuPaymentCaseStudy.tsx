@@ -170,7 +170,7 @@ const decisions = [
       "Category selection tags: users can enter taste preferences quickly and improve recommendation accuracy.",
       "Add to cart: suitable menu items stay actionable so users can order without extra detours."
     ],
-    image: "/assets/Menu_App_img/hi-fi_prototype/iphone16pro_img/11_AI%E6%B3%A8%E6%96%87%20-%20chat2.png"
+    image: "/assets/Menu_App_img/hi-fi_prototype/iphone16pro_img/11_AI_Ordering_chat2.png"
   },
   {
     title: "Menu Category Structure",
@@ -277,7 +277,7 @@ const finalScreens = [
   ["Paying", "/assets/Menu_App_img/hi-fi_prototype/full_img/08%20Paying.png"],
   ["Confirmation", "/assets/Menu_App_img/hi-fi_prototype/full_img/09%20Confirm.png"],
   ["Paid", "/assets/Menu_App_img/hi-fi_prototype/full_img/10%20Paid.png"],
-  ["AI Ordering", "/assets/Menu_App_img/hi-fi_prototype/full_img/11%20AI%E6%B3%A8%E6%96%87%20-%20chat1.png"],
+  ["AI Ordering", "/assets/Menu_App_img/hi-fi_prototype/full_img/11%20AI%20Ordering.png"],
   ["Account", "/assets/Menu_App_img/hi-fi_prototype/full_img/12%20Account.png"]
 ];
 
