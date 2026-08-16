@@ -14,12 +14,12 @@ const experiences = [
       {
         period: "2026.5 - Present",
         title: "Senior Product Manager",
-        summary: "Working on travel and advertising platform products within a global cross-functional environment.",
+        summary: "Leading product initiatives for Rakuten Travel advertising platforms in a global cross-functional environment, including hotel-facing ad products, campaign subscription, inbound traveler programs, and advertising UX improvements, to improve merchant conversion.",
         details: [
-          "Led product strategy and roadmap for travel and advertising platform products.",
-          "Optimized cross-platform delivery logic to improve merchant conversion.",
-          "Coordinated stakeholders across engineering, design, and business teams.",
-          "Agile product development in an international environment."
+          "Driving initiatives including date-based hotel ad delivery, inbound traveler bonus programs, campaign subscription automation, and hotel advertising UX improvements, to improve merchant conversion.",
+          "Defining product requirements and translating business needs into actionable specifications and user flows",
+          "Coordinating delivery across engineering, design, business, and operations teams in Japan and India.",
+          "Reviewing user journeys and product designs to improve usability while balancing advertiser needs, business value, and technical constraints."
         ]
       }
     ]
@@ -30,25 +30,23 @@ const experiences = [
       {
         period: "2022.3 - 2026.4",
         title: "Product Manager",
-        summary: "Led product planning and UX improvement initiatives for au PAY fintech services.",
+        summary: "Led product planning and UX improvements for au PAY, working across core payment, charge, identity verification, transaction history, and external platform integrations including Amazon.",
         details: [
-          "Product planning and feature definition.",
-          "UX improvement for payment-related experiences.",
-          "Requirement coordination with designers, developers, QA, and business teams.",
-          "Agile project management and scrum facilitation.",
-          "User-centered improvement through analytics and behavioral insights."
+          "Led the renewal of transaction history experiences, covering product requirements, UX, and cross-functional delivery.",
+          "Worked on charge, identity verification, and payment-related user journeys across multiple fintech flows.",
+          "Supported the Amazon × au PAY integration, defining account-linking, consent, authentication, and error-handling experiences across mobile and web.",
+          "Used behavioral data and user insights to identify UX issues and guide product improvements.",
         ]
       },
       {
         period: "2022.12 - 2026.2",
         title: "Frontend Engineer",
-        summary: "Developed and maintained frontend applications for payment and fintech platforms.",
+        summary: "Built and improved frontend experiences for au PAY and au Ponta Point using React, Next.js, Vue, and modern web technologies.",
         details: [
-          "Frontend development using React and modern web technologies.",
-          "UI implementation and component design.",
-          "Performance optimization and responsive design.",
-          "Collaboration with product managers and designers.",
-          "Release management and quality assurance support."
+          "Developed frontend flows for payment history, charge, prepaid card, and other au PAY experiences.",
+          "Contributed to the transaction history renewal, including frontend architecture and BFF-integrated UI implementation.",
+          "Improved accessibility, responsive behavior, and release quality across payment-related web experiences.",
+          "Bridged product requirements and implementation through close collaboration with PdMs, designers, backend engineers, and QA.",
         ]
       }
     ]
@@ -59,21 +57,23 @@ const experiences = [
       {
         period: "2020.6 - 2022.2",
         title: "Consultant",
-        summary: "Worked closely with enterprise clients in healthcare-related digital transformation projects.",
+        summary: "Delivered medical system projects for hospitals, covering requirements definition, system development, testing, and onsite implementation.",
         details: [
-          "Client communication and requirement coordination.",
-          "Operational workflow analysis.",
-          "System improvement proposal and documentation.",
-          "Cross-functional collaboration between technical and business teams."
+          "Contributed to a large-scale electronic medical record system upgrade involving approximately 130 project members, from requirements definition through implementation.",
+          "Worked on new features and enhancements for medical billing and hospital information systems.",
+          "Coordinated requirements and system behavior with hospital users, internal engineers, and external stakeholders.",
+          "Supported onsite testing, release, issue resolution, and system rollout in mission-critical healthcare environments."
         ]
       },
       {
         period: "2019.4 - 2020.5",
         title: "System Engineer",
-        summary: "Participated in the development and maintenance of healthcare systems for hospitals and medical institutions.",
+        summary: "Developed and maintained medical accounting systems for hospitals, covering feature development, testing, release, and production support.",
         details: [
-          "System development and operational support.",
-          "Enterprise-scale system workflow understanding."
+          "Developed and enhanced functions for medical accounting systems based on hospital operational requirements.",
+          "Designed, implemented, and tested system features across the development lifecycle.",
+          "Investigated defects and production issues, identified root causes, and coordinated fixes with related teams.",
+          "Supported system releases and onsite implementation to ensure stable operation in hospital environments."
         ]
       }
     ]

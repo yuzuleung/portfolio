@@ -440,11 +440,9 @@ export default function AuPontaPortalPage() {
                 </p>
               </article>
               <article>
-                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-tomato">Timeline</p>
+                <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-tomato">Period</p>
                 <p className="mt-3 text-sm leading-6 text-neutral-600">
-                  2022.03–2022.12
-                  <br />
-                  2024.10–2025.09
+                  2022.03–2022.12, 2024.10–2025.09
                 </p>
               </article>
               <article>

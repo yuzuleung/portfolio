@@ -134,7 +134,7 @@ Liang's career developed across three complementary disciplines: engineering, pr
 
 She began her professional career at Fujitsu working on enterprise healthcare systems. This gave her a foundation in structured system development, requirement definition, large-scale project delivery, and coordination across clients, engineers, and vendors.
 
-At KDDI, she moved closer to large-scale consumer digital products through au PAY and Ponta.
+At KDDI, she moved closer to large-scale consumer digital products through au PAY and au Ponta Point.
 
 His work gradually expanded from product and project coordination into hands-on frontend engineering and then into roles combining product management, UX thinking, and technical implementation.
 
@@ -197,7 +197,7 @@ Current initiatives include:
 - User research for hotel advertising users
 - Design review and usability improvement
 
-Liang works across business requirements, user experience, and engineering feasibility when defining and delivering these products.
+Liang works across business requirements, user experience, and engineering feasibility when defining and delivering these products. Leading product initiatives for Rakuten Travel advertising platforms in a global cross-functional environment, including hotel-facing ad products, campaign subscription, inbound traveler programs, and advertising UX improvements, to improve merchant conversion.
 
 ### Rakuten Ichiba Display Advertising
 
@@ -222,7 +222,7 @@ Roles across different projects included:
 - Product Manager
 - Project Manager
 - Frontend Engineer
-- Scrum facilitator
+- Scrum Master
 
 Main product areas:
 
@@ -267,7 +267,7 @@ Roles:
 
 Industry:
 
-Shealthcare / MedTech
+Healthcare / MedTech
 
 Liang worked on healthcare information systems for hospitals and medical institutions.
 
@@ -286,7 +286,7 @@ Relevant capabilities include:
 - Requirement definition
 - Feature definition
 - User flow clarification
-- UI/UX review
+- UI/UX design and review
 - Backlog management
 - Acceptance criteria
 - Release planning
@@ -333,7 +333,7 @@ Demonstrates:
 Demonstrates:
 
 - Advertising product management
-- B2B platform UX
+- B2B2C platform UX
 - Product planning
 - User research
 - International product development
@@ -493,8 +493,7 @@ Project areas:
 
 Main participation periods:
 
-- 2022.12 - 2024.09
-- 2025.10 - 2026.03
+- 2022.12 - 2024.09, 2025.10 - 2026.03
 
 Roles:
 
@@ -639,6 +638,41 @@ The complexity came from:
 
 ---
 
+### Amazon × au PAY Integration
+
+Liang worked on enabling au PAY as a payment method on Amazon.co.jp through secure account linking and cross-platform payment experiences.
+
+Product Direction:
+Create a clear and reliable account-linking experience that enables users to add au PAY to Amazon with minimal friction while meeting payment, identity verification, privacy, and platform requirements.
+
+Challenge:
+
+- Integrating au PAY into Amazon.co.jp required more than connecting two payment systems.
+- Users needed to securely link their Amazon and au PAY accounts, understand eligibility requirements, provide consent for data sharing, and recover clearly from multiple failure states.
+- The experience also needed to work consistently across mobile app, mobile web, and desktop while coordinating behavior across Amazon, au PAY, authentication, and backend systems.
+
+Liang's Contribution:
+
+- Clarified product and UX requirements across Amazon and au PAY.
+- Designed and reviewed end-to-end account-linking flows.
+- Defined mobile, web, and desktop user journeys.
+- Reviewed consent, identity verification, and eligibility experiences.
+- Designed error states and recovery paths for edge cases.
+- Coordinated requirements across business, UX, frontend, backend, and partner teams.
+
+Product Complexity:
+
+- Cross-Platform Experience
+  Users could begin account linking from Amazon mobile, web, or desktop, requiring different navigation and authentication paths.
+- Identity & Consent
+  The integration required identity verification, explicit user consent, account eligibility checks, and clear communication of payment restrictions.
+- External System Integration
+  The journey crossed Amazon, au PAY, authentication, payment, and backend systems, requiring coordinated behavior across organizational boundaries.
+- Error & Recovery Design
+  The experience needed to handle unverified users, already-linked accounts, timeouts, cancelled linking, and other edge cases without leaving users stranded.
+
+---
+
 ### Identity Verification
 
 Liang worked on identity-related product flows within a regulated FinTech environment.
@@ -658,7 +692,6 @@ Important considerations included:
 
 Liang also contributed to user-facing integrations and related improvements involving services such as:
 
-- Amazon
 - Concur
 
 His work included requirement clarification, UI/UX discussion, integration delivery, and frontend implementation.

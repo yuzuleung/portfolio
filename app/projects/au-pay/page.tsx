@@ -51,6 +51,15 @@ const identityContributions = [
   "Helped ensure the flow was understandable from the user's perspective"
 ];
 
+const amazonContributions = [
+  "Clarified product and UX requirements across Amazon and au PAY",
+  "Designed and reviewed end-to-end account-linking flows",
+  "Defined mobile, web, and desktop user journeys",
+  "Reviewed consent, identity verification, and eligibility experiences",
+  "Designed error states and recovery paths for edge cases",
+  "Coordinated requirements across business, UX, frontend, backend, and partner teams"
+];
+
 const chargeComplexity = [
   ["Multiple Charge Methods", "Point, credit card, and bank-related charge flows had different rules and constraints."],
   ["External Integration", "Some flows depended on external services and partner-side behavior."],
@@ -65,11 +74,32 @@ const identityComplexity = [
   ["Cross-team Delivery", "The project required alignment across product, system, QA, and operational teams."]
 ];
 
-const supportingContributions = [
-  ["Amazon Integration", "Supported requirement clarification, UI/UX design, and delivery coordination for an external service integration."],
+const amazonComplexity = [
+  [
+    "Cross-Platform Experience",
+    "Users could begin account linking from Amazon mobile, web, or desktop, requiring different navigation and authentication paths."
+  ],
+  [
+    "Identity & Consent",
+    "The integration required identity verification, explicit user consent, account eligibility checks, and clear communication of payment restrictions."
+  ],
+  [
+    "External System Integration",
+    "The journey crossed Amazon, au PAY, authentication, payment, and backend systems, requiring coordinated behavior across organizational boundaries."
+  ],
+  [
+    "Error & Recovery Design",
+    "The experience needed to handle unverified users, already-linked accounts, timeouts, cancelled linking, and other edge cases without leaving users stranded."
+  ]
+];
+
+const additionalContributions = [
   ["Concur Integration", "Supported requirement clarification, UI/UX design, and delivery coordination for an external service integration."],
-  ["Charge Before Payment", "Supported charge-before-paying product flows from mini-app experiences."],
-  ["Pay for Prepaid Card", "Supported frontend development for the Pay for Prepaid Card project."]
+  [
+    "Charge Before Payment",
+    "Supported charge-before-payment flows from mini-app experiences, including requirements and user-facing behavior."
+  ],
+  ["Pay for Prepaid Card", "Contributed to frontend implementation for the Pay for Prepaid Card experience."]
 ];
 
 function Section({
@@ -145,20 +175,28 @@ function OutcomeWithImage({ outcome, image, alt }: { outcome: string; image: str
     <div className="mt-5 grid gap-8 md:grid-cols-[1fr_0.62fr] md:items-center">
       <p className="text-sm leading-7 text-neutral-600">{outcome}</p>
       <figure className="flex justify-center overflow-hidden">
-        <img src={assetPath(image)} alt={alt} className="h-auto max-h-[360px] w-auto max-w-[220px]" />
+        <img src={assetPath(image)} alt={alt} className="h-auto max-h-[430px] w-auto max-w-[260px]" />
       </figure>
     </div>
   );
 }
 
-function TitledScreenshotGrid({ images }: { images: Array<[string, string, string]> }) {
+function TitledScreenshotGrid({
+  images,
+  imageClassName = "h-auto max-h-[430px] w-auto max-w-[260px]",
+  gridClassName = "grid-cols-2 gap-8 md:grid-cols-4"
+}: {
+  images: Array<[string, string, string]>;
+  imageClassName?: string;
+  gridClassName?: string;
+}) {
   return (
-    <div className="mt-10 grid grid-cols-2 gap-8 md:grid-cols-4">
+    <div className={`mt-10 grid ${gridClassName}`}>
       {images.map(([src, alt, title]) => (
         <figure key={src} className="text-center">
           <figcaption className="mb-4 text-xs font-medium uppercase tracking-[0.16em] text-[#171512]">{title}</figcaption>
           <div className="flex justify-center overflow-hidden">
-            <img src={assetPath(src)} alt={alt} className="h-auto max-h-[360px] w-auto max-w-[220px]" />
+            <img src={assetPath(src)} alt={alt} className={imageClassName} />
           </div>
         </figure>
       ))}
@@ -166,42 +204,54 @@ function TitledScreenshotGrid({ images }: { images: Array<[string, string, strin
   );
 }
 
-function BorderedScreenshot({ src, alt }: { src: string; alt: string }) {
+function AmazonAccountLinkingFlow() {
   return (
-    <figure className="mx-auto w-full max-w-[230px] overflow-hidden border border-[#171512] bg-white">
-      <img src={assetPath(src)} alt={alt} className="h-auto w-full" />
-    </figure>
+    <TitledScreenshotGrid
+      imageClassName="h-[430px] w-[260px] max-w-full object-cover object-center"
+      images={[
+        [
+          `${imageBase}/pay_amazon_1_sp_add.png`,
+          "Amazon payment method screen for adding au PAY",
+          "Amazon Payment Method"
+        ],
+        [
+          `${imageBase}/pay_amazon_2_sp_linking.png`,
+          "Amazon and au PAY account linking screen",
+          "Account Linking"
+        ],
+        [
+          `${imageBase}/pay_amazon_3_sp_aupay_complete.png`,
+          "au PAY account linking completion screen",
+          "au PAY Complete"
+        ],
+        [
+          `${imageBase}/pay_amazon_4_sp_amazon_complete.png`,
+          "Amazon payment method completion screen",
+          "Amazon Complete"
+        ]
+      ]}
+    />
   );
 }
 
-function BorderedScreenshotGrid({ images }: { images: Array<[string, string]> }) {
+function AdditionalContributions() {
   return (
-    <div className="mt-10 grid gap-8 md:grid-cols-3">
-      {images.map(([src, alt]) => (
-        <BorderedScreenshot key={src} src={src} alt={alt} />
-      ))}
-    </div>
-  );
-}
-
-function AmazonContributionCard() {
-  return (
-    <article className="grid gap-8 border border-black/10 p-6 md:grid-cols-[1fr_0.58fr] md:items-center">
-      <div>
-        <h4 className="text-base font-semibold leading-6 text-[#171512]">Amazon Integration</h4>
-        <p className="mt-3 text-sm leading-7 text-neutral-600">
-          Supported requirement clarification, UI/UX design, and delivery coordination for an external service
-          integration.
-        </p>
+    <section id="additional-contributions" className="border-t border-black/10 py-14 md:py-16">
+      <div className="mx-auto max-w-5xl">
+        <h2 className="font-barlow text-2xl font-semibold leading-8 text-[#171512]">Additional Contributions</h2>
+        <div className="mt-8 border-y border-black/10">
+          {additionalContributions.map(([title, body]) => (
+            <article
+              key={title}
+              className="grid gap-3 border-b border-black/10 py-6 last:border-b-0 md:grid-cols-[0.34fr_1fr] md:gap-10"
+            >
+              <h3 className="text-base font-semibold leading-6 text-[#171512]">{title}</h3>
+              <p className="text-sm leading-7 text-neutral-600">{body}</p>
+            </article>
+          ))}
+        </div>
       </div>
-      <figure className="flex justify-center overflow-hidden">
-        <img
-          src={assetPath(`${imageBase}/pay_amazon.png`)}
-          alt="au PAY Amazon integration screen"
-          className="h-auto max-h-[360px] w-auto max-w-[220px]"
-        />
-      </figure>
-    </article>
+    </section>
   );
 }
 
@@ -302,9 +352,7 @@ export default function AuPayPage() {
               <article>
                 <p className="text-[0.68rem] font-bold uppercase tracking-[0.22em] text-[#171512]">Period</p>
                 <p className="mt-3 text-sm leading-6 text-neutral-600">
-                  2022.12 - 2024.09
-                  <br />
-                  2025.10 - 2026.03
+                  2022.12 - 2026.04
                 </p>
               </article>
               <article>
@@ -353,6 +401,67 @@ export default function AuPayPage() {
 
           <HighlightBlock
             eyebrow="Highlight 01"
+            title="Charge Experience Improvements"
+            intro="Supporting reliable charge-related flows across point charge, credit charge, and bank charge experiences."
+            challenge={
+              <>
+                <p>
+                  Charge flows are sensitive fintech experiences. Users need to understand available methods, complete
+                  actions correctly, and recover from errors without losing trust.
+                </p>
+                <p>
+                  Different charge methods involved different business rules, external services, error states, and
+                  implementation constraints.
+                </p>
+              </>
+            }
+            direction={<p>Make charge flows reliable, understandable, and consistent across multiple payment methods.</p>}
+            contribution={chargeContributions}
+            complexity={chargeComplexity}
+            outcome="Helped deliver and maintain reliable charge experiences across multiple fintech flows while balancing user clarity, system constraints, and release quality."
+            screens={
+              <TitledScreenshotGrid
+                images={[
+                  [`${imageBase}/pay_charge_top.png`, "au PAY charge top screen", "Charge TOP"],
+                  [`${imageBase}/pay_credit_charge.png`, "au PAY credit charge screen", "Credit Card Charge"],
+                  [`${imageBase}/pay_credit_regist.png`, "au PAY credit card registration screen", "Credit Card Regist"],
+                  [`${imageBase}/pay_bank_charge.png`, "au PAY bank charge screen", "Bank Charge"]
+                ]}
+              />
+            }
+          />
+
+          <HighlightBlock
+            eyebrow="Highlight 02"
+            title="Amazon × au PAY Integration"
+            intro="Enabling au PAY as a payment method on Amazon.co.jp through secure account linking and cross-platform payment experiences."
+            challenge={
+              <>
+                <p>Integrating au PAY into Amazon.co.jp required more than connecting two payment systems.</p>
+                <p>
+                  Users needed to securely link their Amazon and au PAY accounts, understand eligibility requirements,
+                  provide consent for data sharing, and recover clearly from multiple failure states.
+                </p>
+                <p>
+                  The experience also needed to work consistently across mobile app, mobile web, and desktop while
+                  coordinating behavior across Amazon, au PAY, authentication, and backend systems.
+                </p>
+              </>
+            }
+            direction={
+              <p>
+                Create a clear and reliable account-linking experience that enables users to add au PAY to Amazon with
+                minimal friction while meeting payment, identity verification, privacy, and platform requirements.
+              </p>
+            }
+            contribution={amazonContributions}
+            complexity={amazonComplexity}
+            outcome="Helped define and deliver the product and UX foundation required to introduce au PAY as a payment method on Amazon.co.jp, supporting a strategic partnership targeting approximately ¥186M in annual sales and 159K users."
+            screens={<AmazonAccountLinkingFlow />}
+          />
+
+          <HighlightBlock
+            eyebrow="Highlight 03"
             title="Transaction History Renewal"
             intro="Renewing a core transaction history experience to make payment activity easier to understand and maintain."
             challenge={
@@ -389,39 +498,7 @@ export default function AuPayPage() {
           />
 
           <HighlightBlock
-            eyebrow="Highlight 02"
-            title="Charge Experience Improvements"
-            intro="Supporting reliable charge-related flows across point charge, credit charge, and bank charge experiences."
-            challenge={
-              <>
-                <p>
-                  Charge flows are sensitive fintech experiences. Users need to understand available methods, complete
-                  actions correctly, and recover from errors without losing trust.
-                </p>
-                <p>
-                  Different charge methods involved different business rules, external services, error states, and
-                  implementation constraints.
-                </p>
-              </>
-            }
-            direction={<p>Make charge flows reliable, understandable, and consistent across multiple payment methods.</p>}
-            contribution={chargeContributions}
-            complexity={chargeComplexity}
-            outcome="Helped deliver and maintain reliable charge experiences across multiple fintech flows while balancing user clarity, system constraints, and release quality."
-            screens={
-              <TitledScreenshotGrid
-                images={[
-                  [`${imageBase}/pay_charge_top.png`, "au PAY charge top screen", "Charge TOP"],
-                  [`${imageBase}/pay_credit_charge.png`, "au PAY credit charge screen", "Credit Card Charge"],
-                  [`${imageBase}/pay_credit_regist.png`, "au PAY credit card registration screen", "Credit Card Regist"],
-                  [`${imageBase}/pay_bank_charge.png`, "au PAY bank charge screen", "Bank Charge"]
-                ]}
-              />
-            }
-          />
-
-          <HighlightBlock
-            eyebrow="Highlight 03"
+            eyebrow="Highlight 04"
             title="Identity Verification"
             intro="Clarifying and delivering identity-related flows within a regulated fintech experience."
             challenge={
@@ -441,27 +518,19 @@ export default function AuPayPage() {
             complexity={identityComplexity}
             outcome="Contributed to a clearer and more reliable identity-related experience within au PAY."
             screens={
-              <BorderedScreenshotGrid
+              <TitledScreenshotGrid
+                gridClassName="grid-cols-1 gap-12 md:grid-cols-3 md:gap-16"
+                imageClassName="h-auto max-h-[390px] w-auto max-w-[260px]"
                 images={[
-                  [`${imageBase}/pay_identity.png`, "au PAY identity verification screen"],
-                  [`${imageBase}/pay_identity_3.png`, "au PAY identity verification guide screen"],
-                  [`${imageBase}/pay_identity_4.png`, "au PAY identity verification status screen"]
+                  [`${imageBase}/pay_identity.png`, "au PAY identity verification screen", "Identity Verification"],
+                  [`${imageBase}/pay_identity_3.png`, "au PAY identity verification guide screen", "Verification Guide"],
+                  [`${imageBase}/pay_identity_4.png`, "au PAY identity verification status screen", "Verification Status"]
                 ]}
               />
             }
           />
 
-          <Section
-            id="supporting-contributions"
-            eyebrow="Highlight 04"
-            title="au PAY&Amazon and other UI/UX Improvements"
-            body="Alongside the main projects, I also contributed to other payment-related initiatives and external integration work."
-          >
-            <div className="grid gap-4 md:grid-cols-2">
-              <AmazonContributionCard />
-              <CompactCards items={supportingContributions.slice(1)} />
-            </div>
-          </Section>
+          <AdditionalContributions />
 
           <Section id="reflection" eyebrow="Reflection" title="Reliable fintech experiences are built through invisible details.">
             <div className="mx-auto max-w-4xl space-y-7 text-lg leading-9 text-neutral-600">
