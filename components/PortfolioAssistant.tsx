@@ -1,7 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { FormEvent, KeyboardEvent, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { FormEvent, KeyboardEvent, ReactNode } from "react";
 
 type ChatMessage = {
   id: string;
@@ -80,6 +81,7 @@ const fallbackFollowUps: SuggestedQuestion[] = [
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const assistantApiUrl = process.env.NEXT_PUBLIC_ASSISTANT_API_URL ?? `${basePath}/api/portfolio-assistant`;
+const maxQuestionLength = 1200;
 
 const welcomeMessage: ChatMessage = {
   id: "welcome",
@@ -134,7 +136,7 @@ function getSafeLinkProps(href: string) {
 
 function renderInlineMarkdown(content: string) {
   const inlinePattern = /(\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)]+)\))/g;
-  const parts: React.ReactNode[] = [];
+  const parts: ReactNode[] = [];
   let lastIndex = 0;
 
   for (const match of content.matchAll(inlinePattern)) {
@@ -241,17 +243,12 @@ function renderMarkdown(content: string) {
 function renderUserMessage(content: string) {
   const lines = content.split("\n");
 
-  return lines.map((line, lineIndex) => {
-    const parts: React.ReactNode[] = [];
-    parts.push(line);
-
-    return (
-      <span key={`${line}-${lineIndex}`}>
-        {parts.length > 0 ? parts : line}
-        {lineIndex < lines.length - 1 ? <br /> : null}
-      </span>
-    );
-  });
+  return lines.map((line, lineIndex) => (
+    <span key={`${line}-${lineIndex}`}>
+      {line}
+      {lineIndex < lines.length - 1 ? <br /> : null}
+    </span>
+  ));
 }
 
 function getFollowUpsForMessage(message: string) {
@@ -293,7 +290,10 @@ export function PortfolioAssistant() {
   const inputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const canSubmit = useMemo(() => input.trim().length > 0 && input.length <= 1200 && !isLoading, [input, isLoading]);
+  const canSubmit = useMemo(
+    () => input.trim().length > 0 && input.length <= maxQuestionLength && !isLoading,
+    [input, isLoading]
+  );
   const hasStartedConversation = messages.length > 1;
   const currentSuggestions = useMemo(() => getSuggestedQuestions(messages, askedCoreQuestionIds), [messages, askedCoreQuestionIds]);
 
@@ -320,7 +320,7 @@ export function PortfolioAssistant() {
   async function submitQuestion(question: string, displayText = question, coreQuestionId?: string) {
     const trimmed = question.trim();
     const visibleText = displayText.trim();
-    if (!trimmed || trimmed.length > 1200 || !visibleText || isLoading) return;
+    if (!trimmed || trimmed.length > maxQuestionLength || !visibleText || isLoading) return;
 
     const userMessage: ChatMessage = {
       id: crypto.randomUUID(),
@@ -468,7 +468,7 @@ export function PortfolioAssistant() {
                 ))}
               </div>
               {error ? <p className="mb-3 text-xs font-medium leading-5 text-tomato">{error}</p> : null}
-              {input.length > 1200 ? (
+              {input.length > maxQuestionLength ? (
                 <p className="mb-3 text-xs font-medium leading-5 text-tomato">Please keep the question under 1200 characters.</p>
               ) : null}
               <div className="flex items-center gap-2">
@@ -524,11 +524,11 @@ export function PortfolioAssistant() {
             <motion.div
               animate={{ scale: [1, 1.015, 1] }}
               transition={{
-              duration: 2.8,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatDelay: 0.45
-            }}
+                duration: 2.8,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatDelay: 0.45
+              }}
             >
               <p className="text-sm font-semibold leading-5 text-ink">Hi, I&apos;m Liang.</p>
               <p className="mt-0.5 whitespace-nowrap text-sm font-semibold leading-5 text-tomato">Ask about me</p>

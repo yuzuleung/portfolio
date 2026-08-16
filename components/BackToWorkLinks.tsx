@@ -2,6 +2,11 @@
 
 import Link from "next/link";
 
+type BottomBackToWorkProps = {
+  className?: string;
+  linkClassName?: string;
+};
+
 export function BackArrow() {
   return (
     <span className="relative h-3 w-6" aria-hidden="true">
@@ -25,7 +30,7 @@ export function TopBackToWork() {
   );
 }
 
-export function BottomBackToWork({ className = "", linkClassName = "" }: { className?: string; linkClassName?: string }) {
+export function BottomBackToWork({ className = "", linkClassName = "" }: BottomBackToWorkProps) {
   return (
     <div className={`pt-7 ${className}`}>
       <Link
